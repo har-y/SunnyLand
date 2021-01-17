@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed;
+    [SerializeField] private float _jumpForce;
 
     private Rigidbody2D _rb;
     private float _horizontal;
@@ -20,5 +21,10 @@ public class PlayerController : MonoBehaviour
     {
         _horizontal = Input.GetAxis("Horizontal");
         _rb.velocity = new Vector2(_moveSpeed * _horizontal, _rb.velocity.y);
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            _rb.velocity = new Vector2(_rb.velocity.x, _jumpForce);
+        }
     }
 }
