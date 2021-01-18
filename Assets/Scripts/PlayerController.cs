@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _horizontal = Input.GetAxis("Horizontal");
+        _horizontal = Input.GetAxisRaw("Horizontal");
         _rb.velocity = new Vector2(_moveSpeed * _horizontal, _rb.velocity.y);
 
         if (Input.GetButtonDown("Jump"))
