@@ -158,6 +158,36 @@ Transform:
   m_Father: {fileID: 458495711}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &116709319
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 116709320}
+  m_Layer: 8
+  m_Name: player_ground_point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &116709320
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116709319}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 645150137}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &270509995
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,7 +428,7 @@ GameObject:
   - component: {fileID: 645150139}
   - component: {fileID: 645150138}
   - component: {fileID: 645150140}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -417,6 +447,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1338434951}
+  - {fileID: 116709320}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -469,6 +500,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22158c0ad3027ca4da65e01585f74cb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _groundPoint: {fileID: 116709320}
+  _ground:
+    serializedVersion: 2
+    m_Bits: 128
   _moveSpeed: 7.5
   _jumpForce: 15
 --- !u!1 &853250488
@@ -481,7 +516,7 @@ GameObject:
   m_Component:
   - component: {fileID: 853250490}
   - component: {fileID: 853250489}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: simple_setup_level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -729,7 +764,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1338434951}
   - component: {fileID: 1338434952}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: player_body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -898,7 +933,7 @@ GameObject:
   - component: {fileID: 1861275305}
   - component: {fileID: 1861275304}
   - component: {fileID: 1861275303}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ground Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1132,7 +1167,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1921879831}
   - component: {fileID: 1921879832}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ceiling Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
