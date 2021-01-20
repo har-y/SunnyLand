@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _jumpForce;
 
     private Rigidbody2D _rb;
+    private Animator _animator;
 
     private float _horizontal;
 
@@ -21,6 +22,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -47,5 +49,9 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+
+        _animator.SetFloat("moveSpeed", Mathf.Abs(_rb.velocity.x));
+        _animator.SetBool("isGrounded", _isGrounded);
+        _animator.SetBool("canJumpAgain", !_canJumpAgain);
     }
 }
