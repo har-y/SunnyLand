@@ -504,7 +504,7 @@ MonoBehaviour:
   _ground:
     serializedVersion: 2
     m_Bits: 128
-  _moveSpeed: 7.5
+  _moveSpeed: 8
   _jumpForce: 15
 --- !u!1 &853250488
 GameObject:

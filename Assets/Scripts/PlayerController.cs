@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private float _horizontal;
 
     private bool _isGrounded;
+    private bool _canJumpAgain;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +36,15 @@ public class PlayerController : MonoBehaviour
             if (_isGrounded)
             {
                 _rb.velocity = new Vector2(_rb.velocity.x, _jumpForce);
+                _canJumpAgain = true;
+            }
+            else
+            {
+                if (_canJumpAgain)
+                {
+                    _rb.velocity = new Vector2(_rb.velocity.x, _jumpForce);
+                    _canJumpAgain = false;
+                }
             }
         }
     }
