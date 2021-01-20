@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private SpriteRenderer _sprite;
     [SerializeField] private Transform _groundPoint;
     [SerializeField] private LayerMask _ground;
 
@@ -48,6 +49,15 @@ public class PlayerController : MonoBehaviour
                     _canJumpAgain = false;
                 }
             }
+        }
+
+        if (_rb.velocity.x < 0)
+        {
+            _sprite.flipX = true;
+        }
+        else if (_rb.velocity.x > 0)
+        {
+            _sprite.flipX = false;
         }
 
         _animator.SetFloat("moveSpeed", Mathf.Abs(_rb.velocity.x));
