@@ -293,6 +293,8 @@ MonoBehaviour:
   _target: {fileID: 645150137}
   _farBackground: {fileID: 270509996}
   _middleBackground: {fileID: 99542106}
+  _minHeight: -1.5
+  _maxHeight: 2.5
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
