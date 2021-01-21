@@ -11,25 +11,27 @@ public class CameraController : MonoBehaviour
     [SerializeField] private float _minHeight;
     [SerializeField] private float _maxHeight;
 
-    private float _xLastPosition;
+    private Vector2 _lastPosition;
+    private Vector2 _backgroundOffset;
+
+    private float _backgroundSpeed = 0.5f;
 
     // Start is called before the first frame update
     void Start()
     {
-        _xLastPosition = transform.position.x;
+        _lastPosition = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(_target.position.x, Mathf.Clamp(transform.position.y, _minHeight, _maxHeight), transform.position.z);
+        transform.position = new Vector3(_target.position.x, Mathf.Clamp(_target.position.y, _minHeight, _maxHeight), transform.position.z);
 
-        float backgroundOffset = transform.position.x - _xLastPosition;
-        float backgroundSpeed = 0.5f;
+        _backgroundOffset = new Vector2(transform.position.x - _lastPosition.x, transform.position.y - _lastPosition.y);
 
-        _farBackground.position += new Vector3(backgroundOffset, 0f, 0f);
-        _middleBackground.position += new Vector3(backgroundOffset * backgroundSpeed, 0f, 0f);
+        _farBackground.position += new Vector3(_backgroundOffset.x, _backgroundOffset.y, 0f);
+        _middleBackground.position += new Vector3(_backgroundOffset.x, _backgroundOffset.y, 0f) * _backgroundSpeed;
 
-        _xLastPosition = transform.position.x;
+        _lastPosition = transform.position;
     }
 }
