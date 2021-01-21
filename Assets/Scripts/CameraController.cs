@@ -25,13 +25,22 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(_target.position.x, Mathf.Clamp(_target.position.y, _minHeight, _maxHeight), transform.position.z);
+        CameraFollow();
 
+        ParallaxBackground();
+    }
+
+    private void CameraFollow()
+    {
+        transform.position = new Vector3(_target.position.x, Mathf.Clamp(_target.position.y, _minHeight, _maxHeight), transform.position.z);
+    }
+
+    private void ParallaxBackground()
+    {
         _backgroundOffset = new Vector2(transform.position.x - _lastPosition.x, transform.position.y - _lastPosition.y);
+        _lastPosition = transform.position;
 
         _farBackground.position += new Vector3(_backgroundOffset.x, _backgroundOffset.y, 0f);
         _middleBackground.position += new Vector3(_backgroundOffset.x, _backgroundOffset.y, 0f) * _backgroundSpeed;
-
-        _lastPosition = transform.position;
     }
 }

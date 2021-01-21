@@ -29,9 +29,22 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PlayerMove();
+        PlayerJump();
+
+        FlipSprite();
+
+        Animations();
+    }
+
+    private void PlayerMove()
+    {
         _horizontal = Input.GetAxisRaw("Horizontal");
         _rb.velocity = new Vector2(_moveSpeed * _horizontal, _rb.velocity.y);
+    }
 
+    private void PlayerJump()
+    {
         _isGrounded = Physics2D.OverlapCircle(_groundPoint.position, 0.2f, _ground);
 
         if (Input.GetButtonDown("Jump"))
@@ -50,7 +63,10 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+    }
 
+    private void FlipSprite()
+    {
         if (_rb.velocity.x < 0)
         {
             _sprite.flipX = true;
@@ -59,7 +75,10 @@ public class PlayerController : MonoBehaviour
         {
             _sprite.flipX = false;
         }
+    }
 
+    private void Animations()
+    {
         _animator.SetFloat("moveSpeed", Mathf.Abs(_rb.velocity.x));
         _animator.SetBool("isGrounded", _isGrounded);
         _animator.SetBool("canJumpAgain", !_canJumpAgain);
