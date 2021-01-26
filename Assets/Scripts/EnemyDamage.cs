@@ -20,7 +20,7 @@ public class EnemyDamage : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Debug.Log("hit");
+            PlayerHealthController.instance.DealDamage();
         }
     }
 }
