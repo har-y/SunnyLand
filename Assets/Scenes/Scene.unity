@@ -325,6 +325,7 @@ GameObject:
   m_Component:
   - component: {fileID: 995098720}
   - component: {fileID: 995098721}
+  - component: {fileID: 995098719}
   m_Layer: 0
   m_Name: Spikes
   m_TagString: Untagged
@@ -332,6 +333,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &995098719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995098718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41829f8a2747d8a42bc3a6f330896a6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &995098720
 Transform:
   m_ObjectHideFlags: 0
