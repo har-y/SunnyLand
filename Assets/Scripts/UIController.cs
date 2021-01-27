@@ -10,6 +10,7 @@ public class UIController : MonoBehaviour
     [SerializeField] private Image _heartSlot3;
 
     [SerializeField] private Sprite _heartFull;
+    [SerializeField] private Sprite _heartHalf;
     [SerializeField] private Sprite _heartEmpty;
 
     public static UIController instance;
@@ -35,20 +36,35 @@ public class UIController : MonoBehaviour
     {
         switch (PlayerHealthController.instance._currentHealth)
         {
-            case 3:
+            case 6:
                 _heartSlot3.sprite = _heartFull;
                 _heartSlot2.sprite = _heartFull;
                 _heartSlot1.sprite = _heartFull;
                 break;
-            case 2:
+            case 5:
+                _heartSlot3.sprite = _heartHalf;
+                _heartSlot2.sprite = _heartFull;
+                _heartSlot1.sprite = _heartFull;
+                break;
+            case 4:
                 _heartSlot3.sprite = _heartEmpty;
                 _heartSlot2.sprite = _heartFull;
+                _heartSlot1.sprite = _heartFull;
+                break;
+            case 3:
+                _heartSlot3.sprite = _heartEmpty;
+                _heartSlot2.sprite = _heartHalf;
+                _heartSlot1.sprite = _heartFull;
+                break;
+            case 2:
+                _heartSlot3.sprite = _heartEmpty;
+                _heartSlot2.sprite = _heartEmpty;
                 _heartSlot1.sprite = _heartFull;
                 break;
             case 1:
                 _heartSlot3.sprite = _heartEmpty;
                 _heartSlot2.sprite = _heartEmpty;
-                _heartSlot1.sprite = _heartFull;
+                _heartSlot1.sprite = _heartHalf;
                 break;
             case 0:
                 _heartSlot3.sprite = _heartEmpty;

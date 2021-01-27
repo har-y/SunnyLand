@@ -249,10 +249,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4448010560405291881, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
-      propertyPath: _maxHealth
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 9012715768587370724, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -870,6 +866,7 @@ MonoBehaviour:
   _heartSlot2: {fileID: 450966610}
   _heartSlot3: {fileID: 770475779}
   _heartFull: {fileID: 8109154662235370213, guid: d9a616f95048ea84e8fc6f7920f846b8, type: 3}
+  _heartHalf: {fileID: 2139837793675082937, guid: d9a616f95048ea84e8fc6f7920f846b8, type: 3}
   _heartEmpty: {fileID: -4390673095631447188, guid: d9a616f95048ea84e8fc6f7920f846b8, type: 3}
 --- !u!1 &1818493216
 GameObject:
