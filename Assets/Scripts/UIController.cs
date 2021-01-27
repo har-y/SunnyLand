@@ -1,9 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
+    [SerializeField] private Image _heartSlot1;
+    [SerializeField] private Image _heartSlot2;
+    [SerializeField] private Image _heartSlot3;
+
+    [SerializeField] private Sprite _heartFull;
+    [SerializeField] private Sprite _heartEmpty;
+
+    public static UIController instance;
+
+    void Awake()
+    {
+        instance = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +29,37 @@ public class UIController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void UpdateHealthDisplay()
+    {
+        switch (PlayerHealthController.instance._currentHealth)
+        {
+            case 3:
+                _heartSlot3.sprite = _heartFull;
+                _heartSlot2.sprite = _heartFull;
+                _heartSlot1.sprite = _heartFull;
+                break;
+            case 2:
+                _heartSlot3.sprite = _heartEmpty;
+                _heartSlot2.sprite = _heartFull;
+                _heartSlot1.sprite = _heartFull;
+                break;
+            case 1:
+                _heartSlot3.sprite = _heartEmpty;
+                _heartSlot2.sprite = _heartEmpty;
+                _heartSlot1.sprite = _heartFull;
+                break;
+            case 0:
+                _heartSlot3.sprite = _heartEmpty;
+                _heartSlot2.sprite = _heartEmpty;
+                _heartSlot1.sprite = _heartEmpty;
+                break;
+            default:
+                _heartSlot3.sprite = _heartEmpty;
+                _heartSlot2.sprite = _heartEmpty;
+                _heartSlot1.sprite = _heartEmpty;
+                break;
+        }
     }
 }

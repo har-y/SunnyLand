@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 450966611}
   - component: {fileID: 450966610}
   m_Layer: 5
-  m_Name: Heart (2)
+  m_Name: Heart Slot (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -402,7 +402,7 @@ GameObject:
   - component: {fileID: 770475780}
   - component: {fileID: 770475779}
   m_Layer: 5
-  m_Name: Heart (3)
+  m_Name: Heart Slot (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -614,7 +614,7 @@ GameObject:
   - component: {fileID: 1094410019}
   - component: {fileID: 1094410018}
   m_Layer: 5
-  m_Name: Heart (1)
+  m_Name: Heart Slot (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -764,7 +764,7 @@ GameObject:
   - component: {fileID: 1187014598}
   - component: {fileID: 1187014602}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: UI Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -866,6 +866,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ed589997058d334491afee8d1830666, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _heartSlot1: {fileID: 1094410018}
+  _heartSlot2: {fileID: 450966610}
+  _heartSlot3: {fileID: 770475779}
+  _heartFull: {fileID: 8109154662235370213, guid: d9a616f95048ea84e8fc6f7920f846b8, type: 3}
+  _heartEmpty: {fileID: -4390673095631447188, guid: d9a616f95048ea84e8fc6f7920f846b8, type: 3}
 --- !u!1 &1818493216
 GameObject:
   m_ObjectHideFlags: 0

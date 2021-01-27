@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class PlayerHealthController : MonoBehaviour
 {
+    [SerializeField] private int _maxHealth;
+
     public static PlayerHealthController instance;
 
-    [SerializeField] private int _currentHealth;
-    [SerializeField] private int _maxHealth;
+    public int _currentHealth;
 
     void Awake()
     {
@@ -32,7 +33,11 @@ public class PlayerHealthController : MonoBehaviour
 
         if (_currentHealth <= 0)
         {
+            _currentHealth = 0;
+
             gameObject.SetActive(false);
         }
+
+        UIController.instance.UpdateHealthDisplay();
     }
 }
