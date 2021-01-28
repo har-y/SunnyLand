@@ -217,13 +217,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22158c0ad3027ca4da65e01585f74cb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 9012715766864449749}
+  _playerSprite: {fileID: 9012715766864449749}
   _groundPoint: {fileID: 9012715768058913429}
   _ground:
     serializedVersion: 2
     m_Bits: 128
   _moveSpeed: 8
   _jumpForce: 15
+  _knockBackTime: 0.25
+  _knockBackForce: 5
 --- !u!114 &4448010560405291881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,4 +239,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 6
+  _invincibleTime: 2
   _currentHealth: 0

@@ -57,6 +57,8 @@ public class PlayerHealthController : MonoBehaviour
             {
                 _invincibleCounter = _invincibleTime;
                 _playerSprite.color = new Color(_playerSprite.color.r, _playerSprite.color.g, _playerSprite.color.b, 0.5f);
+
+                PlayerController.instance.KnockBack();
             }
 
             UIController.instance.UpdateHealthDisplay();
