@@ -41,36 +41,43 @@ public class UIController : MonoBehaviour
                 _heartSlot2.sprite = _heartFull;
                 _heartSlot1.sprite = _heartFull;
                 break;
+
             case 5:
                 _heartSlot3.sprite = _heartHalf;
                 _heartSlot2.sprite = _heartFull;
                 _heartSlot1.sprite = _heartFull;
                 break;
+
             case 4:
                 _heartSlot3.sprite = _heartEmpty;
                 _heartSlot2.sprite = _heartFull;
                 _heartSlot1.sprite = _heartFull;
                 break;
+
             case 3:
                 _heartSlot3.sprite = _heartEmpty;
                 _heartSlot2.sprite = _heartHalf;
                 _heartSlot1.sprite = _heartFull;
                 break;
+
             case 2:
                 _heartSlot3.sprite = _heartEmpty;
                 _heartSlot2.sprite = _heartEmpty;
                 _heartSlot1.sprite = _heartFull;
                 break;
+
             case 1:
                 _heartSlot3.sprite = _heartEmpty;
                 _heartSlot2.sprite = _heartEmpty;
                 _heartSlot1.sprite = _heartHalf;
                 break;
+
             case 0:
                 _heartSlot3.sprite = _heartEmpty;
                 _heartSlot2.sprite = _heartEmpty;
                 _heartSlot1.sprite = _heartEmpty;
                 break;
+
             default:
                 _heartSlot3.sprite = _heartEmpty;
                 _heartSlot2.sprite = _heartEmpty;

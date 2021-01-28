@@ -5,10 +5,13 @@ using UnityEngine;
 public class PlayerHealthController : MonoBehaviour
 {
     [SerializeField] private int _maxHealth;
+    [SerializeField] private float _invincibleTime;
 
     public static PlayerHealthController instance;
 
     public int _currentHealth;
+
+    private float _invincibleCounter;
 
     void Awake()
     {
@@ -24,20 +27,30 @@ public class PlayerHealthController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (_invincibleCounter > 0)
+        {
+            _invincibleCounter -= Time.deltaTime;
+        }
     }
 
     public void DealDamage()
     {
-        _currentHealth--;
-
-        if (_currentHealth <= 0)
+        if (_invincibleCounter <= 0)
         {
-            _currentHealth = 0;
+            _currentHealth--;
 
-            gameObject.SetActive(false);
+            if (_currentHealth <= 0)
+            {
+                _currentHealth = 0;
+
+                gameObject.SetActive(false);
+            }
+            else
+            {
+                _invincibleCounter = _invincibleTime;
+            }
+
+            UIController.instance.UpdateHealthDisplay();
         }
-
-        UIController.instance.UpdateHealthDisplay();
     }
 }
