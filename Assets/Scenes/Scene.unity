@@ -249,6 +249,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4448010560405291881, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
+      propertyPath: _invincibleTime
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9012715768587370721, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
+      propertyPath: _knockBackTime
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 9012715768587370724, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
       propertyPath: m_RootOrder
       value: 3

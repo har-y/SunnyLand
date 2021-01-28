@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class PlayerHealthController : MonoBehaviour
 {
+    [SerializeField] private SpriteRenderer _playerSprite;
+
     [SerializeField] private int _maxHealth;
+
     [SerializeField] private float _invincibleTime;
 
     public static PlayerHealthController instance;
 
     public int _currentHealth;
-
-    private SpriteRenderer _playerSprite;
 
     private float _invincibleCounter;
 
@@ -23,7 +24,6 @@ public class PlayerHealthController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _playerSprite = GetComponentInChildren<SpriteRenderer>();
         _currentHealth = _maxHealth;
     }
 

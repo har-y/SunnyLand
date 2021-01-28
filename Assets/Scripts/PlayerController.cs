@@ -113,6 +113,7 @@ public class PlayerController : MonoBehaviour
         _animator.SetFloat("moveSpeed", Mathf.Abs(_rb.velocity.x));
         _animator.SetBool("isGrounded", _isGrounded);
         _animator.SetBool("canJumpAgain", !_canJumpAgain);
+        _animator.SetFloat("isHurt", _knockBackCounter);
     }
 
     public void KnockBack()
