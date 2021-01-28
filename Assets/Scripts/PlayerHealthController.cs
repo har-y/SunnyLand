@@ -11,6 +11,8 @@ public class PlayerHealthController : MonoBehaviour
 
     public int _currentHealth;
 
+    private SpriteRenderer _playerSprite;
+
     private float _invincibleCounter;
 
     void Awake()
@@ -21,6 +23,7 @@ public class PlayerHealthController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _playerSprite = GetComponentInChildren<SpriteRenderer>();
         _currentHealth = _maxHealth;
     }
 
@@ -30,6 +33,11 @@ public class PlayerHealthController : MonoBehaviour
         if (_invincibleCounter > 0)
         {
             _invincibleCounter -= Time.deltaTime;
+
+            if (_invincibleCounter <= 0)
+            {
+                _playerSprite.color = new Color(_playerSprite.color.r, _playerSprite.color.g, _playerSprite.color.b, 1f);
+            }
         }
     }
 
@@ -48,6 +56,7 @@ public class PlayerHealthController : MonoBehaviour
             else
             {
                 _invincibleCounter = _invincibleTime;
+                _playerSprite.color = new Color(_playerSprite.color.r, _playerSprite.color.g, _playerSprite.color.b, 0.5f);
             }
 
             UIController.instance.UpdateHealthDisplay();
