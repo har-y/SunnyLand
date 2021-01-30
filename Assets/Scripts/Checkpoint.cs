@@ -28,4 +28,9 @@ public class Checkpoint : MonoBehaviour
             _checkPoint.sprite = _checkPointOn;
         }
     }
+
+    public void ResetCheckpoint()
+    {
+        _checkPoint.sprite = _checkPointOff;
+    }
 }
