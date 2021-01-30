@@ -31,9 +31,9 @@ public class CheckpointController : MonoBehaviour
 
     public void DeactivateCheckpoints()
     {
-        for (int i = 0; i < _checkpoints.Length; i++)
+        foreach (Checkpoint item in _checkpoints)
         {
-            _checkpoints[i].DeactivateCheckpoint();
+            item.DeactivateCheckpoint();
         }
     }
 
