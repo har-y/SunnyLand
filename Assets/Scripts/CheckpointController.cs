@@ -20,6 +20,7 @@ public class CheckpointController : MonoBehaviour
     void Start()
     {
         _checkpoints = FindObjectsOfType<Checkpoint>();
+        _spawnPosition = PlayerController.instance.transform.position;
     }
 
     // Update is called once per frame
@@ -39,5 +40,10 @@ public class CheckpointController : MonoBehaviour
     public void SetSpawnPosition(Vector3 position)
     {
         _spawnPosition = position;
+    }
+
+    public Vector3 GetSpawnPosition()
+    {
+        return _spawnPosition;
     }
 }

@@ -6,12 +6,11 @@ public class PlayerHealthController : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer _playerSprite;
 
-    [SerializeField] private int _maxHealth;
-
     [SerializeField] private float _invincibleTime;
 
     public static PlayerHealthController instance;
 
+    public int _maxHealth;
     public int _currentHealth;
 
     private float _invincibleCounter;
@@ -51,7 +50,7 @@ public class PlayerHealthController : MonoBehaviour
             {
                 _currentHealth = 0;
 
-                gameObject.SetActive(false);
+                LevelManager.instance.RespawnPlayer();
             }
             else
             {
