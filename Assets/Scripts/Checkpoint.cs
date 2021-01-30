@@ -25,11 +25,13 @@ public class Checkpoint : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            CheckpointController.instance.DeactivateCheckpoints();
+
             _checkPoint.sprite = _checkPointOn;
         }
     }
 
-    public void ResetCheckpoint()
+    public void DeactivateCheckpoint()
     {
         _checkPoint.sprite = _checkPointOff;
     }
