@@ -26,6 +26,7 @@ public class Checkpoint : MonoBehaviour
         if (collision.tag == "Player")
         {
             CheckpointController.instance.DeactivateCheckpoints();
+            CheckpointController.instance.SetSpawnPosition(transform.position);
 
             _checkPoint.sprite = _checkPointOn;
         }
