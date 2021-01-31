@@ -91,8 +91,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ac4d979b20766438a905730281bef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isGem: 0
+  _pickup: {fileID: 3122756238373492042, guid: f47c2b2a3f8f6464eb66d318b8eea6a4, type: 3}
   _isLife: 1
+  _isExtraLife: 0
+  _isGem: 0
 --- !u!1 &896522300681773306
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,8 +163,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -660736427
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 8109154662235370213, guid: d9a616f95048ea84e8fc6f7920f846b8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

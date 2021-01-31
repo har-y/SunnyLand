@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Collectibles : MonoBehaviour
 {
+    [SerializeField] private GameObject _pickup;
+
     [SerializeField] private bool _isLife;
     [SerializeField] private bool _isExtraLife;
     [SerializeField] private bool _isGem;
@@ -37,6 +39,8 @@ public class Collectibles : MonoBehaviour
                 _isCollected = true;
 
                 Destroy(gameObject);
+
+                Instantiate(_pickup, transform.position, transform.rotation);
             }
 
             if (_isExtraLife)
@@ -49,6 +53,8 @@ public class Collectibles : MonoBehaviour
                 _isCollected = true;
 
                 Destroy(gameObject);
+
+                Instantiate(_pickup, transform.position, transform.rotation);
             }
 
             if (_isGem)
@@ -58,6 +64,8 @@ public class Collectibles : MonoBehaviour
                 _isCollected = true;
 
                 Destroy(gameObject);
+
+                Instantiate(_pickup, transform.position, transform.rotation);
 
                 UIController.instance.UpdateGemCounter();
             }
