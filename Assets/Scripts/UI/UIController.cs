@@ -10,6 +10,8 @@ public class UIController : MonoBehaviour
     [SerializeField] private Sprite _heartFull;
     [SerializeField] private Sprite _heartEmpty;
 
+    [SerializeField] private Text _gemCounterText;
+
     public static UIController instance;
 
     void Awake()
@@ -21,6 +23,7 @@ public class UIController : MonoBehaviour
     void Start()
     {
         UpdateHealthDisplay();
+        UpdateGemCounter();
     }
 
     // Update is called once per frame
@@ -52,5 +55,10 @@ public class UIController : MonoBehaviour
                 _heartSlots[i].enabled = false;
             }
         }
+    }
+
+    public void UpdateGemCounter()
+    {
+        _gemCounterText.text = LevelManager.instance.gemCollected.ToString();
     }
 }

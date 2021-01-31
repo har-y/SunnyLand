@@ -58,6 +58,8 @@ public class Collectibles : MonoBehaviour
                 _isCollected = true;
 
                 Destroy(gameObject);
+
+                UIController.instance.UpdateGemCounter();
             }
         }
     }
