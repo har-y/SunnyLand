@@ -10,10 +10,9 @@ public class PlayerHealthController : MonoBehaviour
 
     public static PlayerHealthController instance;
 
+    public int healthLimit;
     public int maxHealth;
     public int currentHealth;
-
-    private int healthLimit;
 
     private float _invincibleCounter;
 
