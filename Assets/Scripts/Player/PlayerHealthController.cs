@@ -6,6 +6,8 @@ public class PlayerHealthController : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer _playerSprite;
 
+    [SerializeField] private GameObject _deathEffect;
+
     [SerializeField] private float _invincibleTime;
 
     public static PlayerHealthController instance;
@@ -50,6 +52,8 @@ public class PlayerHealthController : MonoBehaviour
             if (currentHealth <= 0)
             {
                 currentHealth = 0;
+
+                Instantiate(_deathEffect, transform.position, transform.rotation);
 
                 LevelManager.instance.RespawnPlayer();
             }

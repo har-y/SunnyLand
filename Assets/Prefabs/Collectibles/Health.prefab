@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ac4d979b20766438a905730281bef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pickup: {fileID: 3122756238373492042, guid: f47c2b2a3f8f6464eb66d318b8eea6a4, type: 3}
+  _pickupEffect: {fileID: 3122756238373492042, guid: f47c2b2a3f8f6464eb66d318b8eea6a4, type: 3}
   _isLife: 1
   _isExtraLife: 0
   _isGem: 0
