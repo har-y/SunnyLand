@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Collectibles : MonoBehaviour
 {
+    [SerializeField] private bool _isGem;
+
+    private bool _isCollected;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +18,20 @@ public class Collectibles : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player" && !_isCollected)
+        {
+            if (_isGem)
+            {
+                LevelManager.instance.gemCollected++;
+
+                _isCollected = true;
+
+                Destroy(gameObject);
+            }
+        }
     }
 }

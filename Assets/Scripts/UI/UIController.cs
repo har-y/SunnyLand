@@ -34,7 +34,7 @@ public class UIController : MonoBehaviour
 
     public void UpdateHealthDisplay()
     {
-        switch (PlayerHealthController.instance._currentHealth)
+        switch (PlayerHealthController.instance.currentHealth)
         {
             case 6:
                 _heartSlot3.sprite = _heartFull;

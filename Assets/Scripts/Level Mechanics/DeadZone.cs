@@ -20,6 +20,8 @@ public class DeadZone : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            PlayerHealthController.instance.currentHealth = 0;
+            UIController.instance.UpdateHealthDisplay();
             LevelManager.instance.RespawnPlayer();
         }
     }

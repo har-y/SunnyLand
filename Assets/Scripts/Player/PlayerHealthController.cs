@@ -10,8 +10,8 @@ public class PlayerHealthController : MonoBehaviour
 
     public static PlayerHealthController instance;
 
-    public int _maxHealth;
-    public int _currentHealth;
+    public int maxHealth;
+    public int currentHealth;
 
     private float _invincibleCounter;
 
@@ -23,7 +23,7 @@ public class PlayerHealthController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _currentHealth = _maxHealth;
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -44,11 +44,11 @@ public class PlayerHealthController : MonoBehaviour
     {
         if (_invincibleCounter <= 0)
         {
-            _currentHealth--;
+            currentHealth--;
 
-            if (_currentHealth <= 0)
+            if (currentHealth <= 0)
             {
-                _currentHealth = 0;
+                currentHealth = 0;
 
                 LevelManager.instance.RespawnPlayer();
             }

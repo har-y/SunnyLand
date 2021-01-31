@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
+    [SerializeField] private float _waitTime;
+
     public static LevelManager instance;
 
-    [SerializeField] private float _waitTime;
+    public int gemCollected;
 
     private void Awake()
     {
@@ -39,7 +41,7 @@ public class LevelManager : MonoBehaviour
         PlayerController.instance.gameObject.SetActive(true);
         PlayerController.instance.transform.position = CheckpointController.instance.GetSpawnPosition();
 
-        PlayerHealthController.instance._currentHealth = PlayerHealthController.instance._maxHealth;
+        PlayerHealthController.instance.currentHealth = PlayerHealthController.instance.maxHealth;
 
         UIController.instance.UpdateHealthDisplay();
     }
