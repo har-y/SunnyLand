@@ -26,18 +26,10 @@ public class Collectibles : MonoBehaviour
     {
         if (collision.tag == "Player" && !_isCollected)
         {
-            if (_isGem)
-            {
-                LevelManager.instance.gemCollected++;
-
-                _isCollected = true;
-
-                Destroy(gameObject);
-            }
 
             if (_isLife)
             {
-                if (PlayerHealthController.instance.currentHealth != PlayerHealthController.instance.maxHealth)
+                if (PlayerHealthController.instance.currentHealth <= PlayerHealthController.instance.maxHealth)
                 {
                     PlayerHealthController.instance.AddLife();
                 }
@@ -49,10 +41,19 @@ public class Collectibles : MonoBehaviour
 
             if (_isExtraLife)
             {
-                if (PlayerHealthController.instance.maxHealth != PlayerHealthController.instance.healthLimit)
+                if (PlayerHealthController.instance.maxHealth <= PlayerHealthController.instance.healthLimit)
                 {
                     PlayerHealthController.instance.AddExtraLife();
                 }
+
+                _isCollected = true;
+
+                Destroy(gameObject);
+            }
+
+            if (_isGem)
+            {
+                LevelManager.instance.gemCollected++;
 
                 _isCollected = true;
 

@@ -25,7 +25,6 @@ public class PlayerHealthController : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
-        healthLimit = 5;
     }
 
     // Update is called once per frame
@@ -81,12 +80,13 @@ public class PlayerHealthController : MonoBehaviour
     public void AddExtraLife()
     {
         maxHealth++;
-        currentHealth++;
 
         if (maxHealth > healthLimit)
         {
             maxHealth = healthLimit;
         }
+
+        AddLife();
 
         UIController.instance.UpdateHealthDisplay();
     }
