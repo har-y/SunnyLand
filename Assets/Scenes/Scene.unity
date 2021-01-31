@@ -415,6 +415,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4448010560405291881, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
+      propertyPath: _deathEffect
+      value: 
+      objectReference: {fileID: 3402003171754654322, guid: 4ea8fb236fb00d14cb07594338ca39f9, type: 3}
+    - target: {fileID: 4448010560405291881, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
       propertyPath: _invincibleTime
       value: 1.5
       objectReference: {fileID: 0}
