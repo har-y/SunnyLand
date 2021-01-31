@@ -5,6 +5,7 @@ using UnityEngine;
 public class Collectibles : MonoBehaviour
 {
     [SerializeField] private bool _isGem;
+    [SerializeField] private bool _isLife;
 
     private bool _isCollected;
 
@@ -27,6 +28,18 @@ public class Collectibles : MonoBehaviour
             if (_isGem)
             {
                 LevelManager.instance.gemCollected++;
+
+                _isCollected = true;
+
+                Destroy(gameObject);
+            }
+
+            if (_isLife)
+            {
+                if (PlayerHealthController.instance.currentHealth != PlayerHealthController.instance.maxHealth)
+                {
+                    PlayerHealthController.instance.AddLife();
+                }
 
                 _isCollected = true;
 

@@ -8,6 +8,8 @@ public class UIController : MonoBehaviour
     [SerializeField] private Image _heartSlot1;
     [SerializeField] private Image _heartSlot2;
     [SerializeField] private Image _heartSlot3;
+    [SerializeField] private Image _heartSlot4;
+    [SerializeField] private Image _heartSlot5;
 
     [SerializeField] private Sprite _heartFull;
     [SerializeField] private Sprite _heartHalf;
@@ -36,52 +38,118 @@ public class UIController : MonoBehaviour
     {
         switch (PlayerHealthController.instance.currentHealth)
         {
-            case 6:
+            case 5:
+                _heartSlot5.sprite = _heartFull;
+                _heartSlot4.sprite = _heartFull;
                 _heartSlot3.sprite = _heartFull;
                 _heartSlot2.sprite = _heartFull;
                 _heartSlot1.sprite = _heartFull;
                 break;
 
-            case 5:
-                _heartSlot3.sprite = _heartHalf;
-                _heartSlot2.sprite = _heartFull;
-                _heartSlot1.sprite = _heartFull;
-                break;
-
             case 4:
-                _heartSlot3.sprite = _heartEmpty;
+                _heartSlot5.sprite = _heartEmpty;
+                _heartSlot4.sprite = _heartFull;
+                _heartSlot3.sprite = _heartFull;
                 _heartSlot2.sprite = _heartFull;
                 _heartSlot1.sprite = _heartFull;
                 break;
 
             case 3:
-                _heartSlot3.sprite = _heartEmpty;
-                _heartSlot2.sprite = _heartHalf;
+                _heartSlot5.sprite = _heartEmpty;
+                _heartSlot4.sprite = _heartEmpty;
+                _heartSlot3.sprite = _heartFull;
+                _heartSlot2.sprite = _heartFull;
                 _heartSlot1.sprite = _heartFull;
                 break;
 
             case 2:
+                _heartSlot5.sprite = _heartEmpty;
+                _heartSlot4.sprite = _heartEmpty;
+                _heartSlot3.sprite = _heartEmpty;
+                _heartSlot2.sprite = _heartFull;
+                _heartSlot1.sprite = _heartFull;
+                break;
+
+            case 1:
+                _heartSlot5.sprite = _heartEmpty;
+                _heartSlot4.sprite = _heartEmpty;
                 _heartSlot3.sprite = _heartEmpty;
                 _heartSlot2.sprite = _heartEmpty;
                 _heartSlot1.sprite = _heartFull;
                 break;
 
-            case 1:
-                _heartSlot3.sprite = _heartEmpty;
-                _heartSlot2.sprite = _heartEmpty;
-                _heartSlot1.sprite = _heartHalf;
-                break;
-
             case 0:
+                _heartSlot5.sprite = _heartEmpty;
+                _heartSlot4.sprite = _heartEmpty;
                 _heartSlot3.sprite = _heartEmpty;
                 _heartSlot2.sprite = _heartEmpty;
                 _heartSlot1.sprite = _heartEmpty;
                 break;
 
             default:
-                _heartSlot3.sprite = _heartEmpty;
-                _heartSlot2.sprite = _heartEmpty;
-                _heartSlot1.sprite = _heartEmpty;
+                _heartSlot5.sprite = _heartEmpty;
+                _heartSlot4.sprite = _heartEmpty;
+                _heartSlot3.sprite = _heartFull;
+                _heartSlot2.sprite = _heartFull;
+                _heartSlot1.sprite = _heartFull;
+                break;
+        }
+
+        switch (PlayerHealthController.instance.maxHealth)
+        {
+            case 5:
+                _heartSlot5.gameObject.SetActive(true);
+                _heartSlot4.gameObject.SetActive(true);
+                _heartSlot3.gameObject.SetActive(true);
+                _heartSlot2.gameObject.SetActive(true);
+                _heartSlot1.gameObject.SetActive(true);
+                break;
+            case 4:
+                _heartSlot5.gameObject.SetActive(false);
+                _heartSlot4.gameObject.SetActive(true);
+                _heartSlot3.gameObject.SetActive(true);
+                _heartSlot2.gameObject.SetActive(true);
+                _heartSlot1.gameObject.SetActive(true);
+                break;
+
+            case 3:
+                _heartSlot5.gameObject.SetActive(false);
+                _heartSlot4.gameObject.SetActive(false);
+                _heartSlot3.gameObject.SetActive(true);
+                _heartSlot2.gameObject.SetActive(true);
+                _heartSlot1.gameObject.SetActive(true);
+                break;
+
+            case 2:
+                _heartSlot5.gameObject.SetActive(false);
+                _heartSlot4.gameObject.SetActive(false);
+                _heartSlot3.gameObject.SetActive(false);
+                _heartSlot2.gameObject.SetActive(true);
+                _heartSlot1.gameObject.SetActive(true);
+                break;
+
+            case 1:
+                _heartSlot5.gameObject.SetActive(false);
+                _heartSlot4.gameObject.SetActive(false);
+                _heartSlot3.gameObject.SetActive(false);
+                _heartSlot2.gameObject.SetActive(false);
+                _heartSlot1.gameObject.SetActive(true);
+                break;
+
+            case 0:
+                _heartSlot5.gameObject.SetActive(false);
+                _heartSlot4.gameObject.SetActive(false);
+                _heartSlot3.gameObject.SetActive(false);
+                _heartSlot2.gameObject.SetActive(false);
+                _heartSlot1.gameObject.SetActive(false);
+                break;
+
+            default:
+                _heartSlot5.gameObject.SetActive(false);
+                _heartSlot4.gameObject.SetActive(false);
+                _heartSlot3.gameObject.SetActive(true);
+                _heartSlot2.gameObject.SetActive(true);
+                _heartSlot1.gameObject.SetActive(true);
                 break;
         }
     }

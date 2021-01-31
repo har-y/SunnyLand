@@ -13,6 +13,8 @@ public class PlayerHealthController : MonoBehaviour
     public int maxHealth;
     public int currentHealth;
 
+    private int healthLimit;
+
     private float _invincibleCounter;
 
     void Awake()
@@ -24,6 +26,7 @@ public class PlayerHealthController : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        healthLimit = 5;
     }
 
     // Update is called once per frame
@@ -62,5 +65,30 @@ public class PlayerHealthController : MonoBehaviour
 
             UIController.instance.UpdateHealthDisplay();
         }
+    }
+
+    public void AddLife()
+    {
+        currentHealth++;
+
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+
+        UIController.instance.UpdateHealthDisplay();
+    }
+
+    public void AddExtraLife()
+    {
+        maxHealth++;
+        currentHealth++;
+
+        if (maxHealth > healthLimit)
+        {
+            maxHealth = healthLimit;
+        }
+
+        UIController.instance.UpdateHealthDisplay();
     }
 }
