@@ -1045,7 +1045,9 @@ MonoBehaviour:
   _enemySprite: {fileID: 837666287}
   _leftPoint: {fileID: 2086542930}
   _rightPoint: {fileID: 1441951147}
-  _moveSpeed: 2.5
+  _moveSpeed: 3.5
+  _moveTime: 3
+  _waitTime: 2
 --- !u!1 &995098718
 GameObject:
   m_ObjectHideFlags: 0
