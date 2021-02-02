@@ -427,6 +427,10 @@ PrefabInstance:
       value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 9012715768587370721, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
+      propertyPath: _bounceForce
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 9012715768587370721, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
       propertyPath: _knockBackTime
       value: 0.5
       objectReference: {fileID: 0}

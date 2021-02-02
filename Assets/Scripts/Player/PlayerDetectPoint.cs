@@ -27,6 +27,8 @@ public class PlayerDetectPoint : MonoBehaviour
             collision.gameObject.SetActive(false);
 
             Instantiate(_deathEffect, collision.transform.position, collision.transform.rotation);
+
+            PlayerController.instance.Bounce();
         }
     }
 }

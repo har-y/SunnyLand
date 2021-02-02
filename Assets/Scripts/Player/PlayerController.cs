@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float _moveSpeed;
     [SerializeField] private float _jumpForce;
+    [SerializeField] private float _bounceForce;
     [SerializeField] private float _knockBackTime;
     [SerializeField] private float _knockBackForce;
 
@@ -120,5 +121,10 @@ public class PlayerController : MonoBehaviour
     {
         _knockBackCounter = _knockBackTime;
         _rb.velocity = new Vector2(0f, _knockBackForce);
+    }
+
+    public void Bounce()
+    {
+        _rb.velocity = new Vector2(_rb.velocity.x, _bounceForce);
     }
 }
