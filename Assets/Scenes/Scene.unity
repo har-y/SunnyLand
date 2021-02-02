@@ -406,6 +406,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3051475110719583812, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
+      propertyPath: _deathEffect
+      value: 
+      objectReference: {fileID: 3402003171754654322, guid: 4ea8fb236fb00d14cb07594338ca39f9, type: 3}
     - target: {fileID: 4448010560405291881, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
       propertyPath: maxHealth
       value: 3
@@ -798,7 +802,6 @@ GameObject:
   m_Component:
   - component: {fileID: 837666286}
   - component: {fileID: 837666287}
-  - component: {fileID: 837666288}
   m_Layer: 0
   m_Name: frog_body
   m_TagString: Untagged
@@ -871,32 +874,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &837666288
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 837666285}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.1}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.125, y: 2}
-    newSize: {x: 2.125, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.6, y: 1.2}
-  m_EdgeRadius: 0
 --- !u!1001 &959703599
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -969,7 +946,7 @@ GameObject:
   - component: {fileID: 976439568}
   m_Layer: 0
   m_Name: Frog
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
