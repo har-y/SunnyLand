@@ -407,6 +407,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3051475110719583812, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
+      propertyPath: _dropChance
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 3051475110719583812, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
+      propertyPath: _collectible
+      value: 
+      objectReference: {fileID: 8525775678992978420, guid: c59b5387a6ecb5840b18e51bff7fd9f0, type: 3}
+    - target: {fileID: 3051475110719583812, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
       propertyPath: _deathEffect
       value: 
       objectReference: {fileID: 3402003171754654322, guid: 4ea8fb236fb00d14cb07594338ca39f9, type: 3}
