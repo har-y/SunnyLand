@@ -31,7 +31,7 @@ public class EnemyController : MonoBehaviour
         _leftPoint.parent = null;
         _rightPoint.parent = null;
 
-        _moveCounter = _moveTime;
+        _waitCounter = _waitTime;
     }
 
     // Update is called once per frame
