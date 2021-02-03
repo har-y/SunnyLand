@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3296843430039759608}
   - component: {fileID: 292390097795872008}
+  - component: {fileID: 4145175722631201334}
   m_Layer: 8
   m_Name: player_detect_point
   m_TagString: Untagged
@@ -44,7 +45,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.975}
+  m_Offset: {x: 0, y: -1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -55,8 +56,23 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.05}
+  m_Size: {x: 0.25, y: 0.35}
   m_EdgeRadius: 0
+--- !u!114 &4145175722631201334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4320733887450010922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e66d4015729d44885dccee1b818129, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _deathEffect: {fileID: 3402003171754654322, guid: 4ea8fb236fb00d14cb07594338ca39f9, type: 3}
+  _collectible: {fileID: 8525775678992978420, guid: c59b5387a6ecb5840b18e51bff7fd9f0, type: 3}
+  _dropChance: 60
 --- !u!1 &9012715766864449755
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,7 +199,6 @@ GameObject:
   - component: {fileID: 9012715768587370723}
   - component: {fileID: 9012715768587370721}
   - component: {fileID: 4448010560405291881}
-  - component: {fileID: 3051475110719583812}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -283,9 +298,9 @@ MonoBehaviour:
     m_Bits: 128
   _moveSpeed: 8
   _jumpForce: 15
-  _bounceForce: 0
-  _knockBackTime: 0.25
-  _knockBackForce: 5
+  _bounceForce: 12
+  _knockBackTime: 0.5
+  _knockBackForce: 10
 --- !u!114 &4448010560405291881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,19 +316,6 @@ MonoBehaviour:
   _playerSprite: {fileID: 9012715766864449749}
   _deathEffect: {fileID: 0}
   _invincibleTime: 2
-  healthLimit: 0
-  maxHealth: 0
+  healthLimit: 5
+  maxHealth: 3
   currentHealth: 0
---- !u!114 &3051475110719583812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9012715768587370725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16e66d4015729d44885dccee1b818129, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deathEffect: {fileID: 0}

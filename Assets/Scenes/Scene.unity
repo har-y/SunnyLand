@@ -406,46 +406,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3051475110719583812, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
-      propertyPath: _dropChance
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 3051475110719583812, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
-      propertyPath: _collectible
-      value: 
-      objectReference: {fileID: 8525775678992978420, guid: c59b5387a6ecb5840b18e51bff7fd9f0, type: 3}
-    - target: {fileID: 3051475110719583812, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
-      propertyPath: _deathEffect
-      value: 
-      objectReference: {fileID: 3402003171754654322, guid: 4ea8fb236fb00d14cb07594338ca39f9, type: 3}
-    - target: {fileID: 4448010560405291881, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
-      propertyPath: maxHealth
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4448010560405291881, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
-      propertyPath: healthLimit
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4448010560405291881, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
-      propertyPath: _deathEffect
-      value: 
-      objectReference: {fileID: 3402003171754654322, guid: 4ea8fb236fb00d14cb07594338ca39f9, type: 3}
-    - target: {fileID: 4448010560405291881, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
-      propertyPath: _invincibleTime
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9012715768587370721, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
-      propertyPath: _bounceForce
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 9012715768587370721, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
-      propertyPath: _knockBackTime
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9012715768587370721, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
-      propertyPath: _knockBackForce
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 9012715768587370724, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -814,6 +774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 837666286}
   - component: {fileID: 837666287}
+  - component: {fileID: 837666288}
   m_Layer: 0
   m_Name: frog_body
   m_TagString: Untagged
@@ -886,6 +847,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &837666288
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837666285}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.1}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.125, y: 2}
+    newSize: {x: 2.125, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6, y: 1}
+  m_EdgeRadius: 0
 --- !u!1001 &959703599
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -956,6 +943,7 @@ GameObject:
   - component: {fileID: 976439565}
   - component: {fileID: 976439566}
   - component: {fileID: 976439568}
+  - component: {fileID: 976439569}
   m_Layer: 0
   m_Name: Frog
   m_TagString: Enemy
@@ -990,7 +978,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.1}
@@ -1064,6 +1052,18 @@ MonoBehaviour:
   _moveSpeed: 3.5
   _moveTime: 3
   _waitTime: 2
+--- !u!114 &976439569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976439563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41829f8a2747d8a42bc3a6f330896a6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &995098718
 GameObject:
   m_ObjectHideFlags: 0
