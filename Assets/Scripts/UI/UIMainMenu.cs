@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIMainMenu : MonoBehaviour
 {
+    [SerializeField] private string _startGame;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +17,19 @@ public class UIMainMenu : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene(_startGame);
+
+        Debug.Log("start game");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+
+        Debug.Log("quit game");
     }
 }
