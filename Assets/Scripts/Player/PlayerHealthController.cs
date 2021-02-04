@@ -55,12 +55,16 @@ public class PlayerHealthController : MonoBehaviour
 
                 Instantiate(_deathEffect, transform.position, transform.rotation);
 
+                AudioManager.instance.PlaySoundClip(9);
+
                 LevelManager.instance.RespawnPlayer();
             }
             else
             {
                 _invincibleCounter = _invincibleTime;
                 _playerSprite.color = new Color(_playerSprite.color.r, _playerSprite.color.g, _playerSprite.color.b, 0.5f);
+
+                AudioManager.instance.PlaySoundClip(10);
 
                 PlayerController.instance.KnockBack();
             }

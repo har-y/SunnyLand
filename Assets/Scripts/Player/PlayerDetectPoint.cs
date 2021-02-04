@@ -35,10 +35,13 @@ public class PlayerDetectPoint : MonoBehaviour
             PlayerController.instance.Bounce();
 
             float dropValue = Random.Range(0f, 100f);
+
             if (dropValue <= _dropChance)
             {
                 Instantiate(_collectible, collision.transform.position, collision.transform.rotation);
             }
+
+            AudioManager.instance.PlaySoundClip(4);
         }
     }
 }

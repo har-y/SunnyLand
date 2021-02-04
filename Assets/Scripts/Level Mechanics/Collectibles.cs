@@ -38,6 +38,8 @@ public class Collectibles : MonoBehaviour
 
                 _isCollected = true;
 
+                AudioManager.instance.PlaySoundClip(8);
+
                 Destroy(gameObject);
 
                 Instantiate(_pickupEffect, transform.position, transform.rotation);
@@ -52,6 +54,8 @@ public class Collectibles : MonoBehaviour
 
                 _isCollected = true;
 
+                AudioManager.instance.PlaySoundClip(8);
+
                 Destroy(gameObject);
 
                 Instantiate(_pickupEffect, transform.position, transform.rotation);
@@ -62,6 +66,8 @@ public class Collectibles : MonoBehaviour
                 LevelManager.instance.gemCollected++;
 
                 _isCollected = true;
+
+                AudioManager.instance.PlaySoundClip(7);
 
                 Destroy(gameObject);
 

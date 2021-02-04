@@ -70,6 +70,9 @@ public class PlayerController : MonoBehaviour
             if (_isGrounded)
             {
                 _rb.velocity = new Vector2(_rb.velocity.x, _jumpForce);
+
+                AudioManager.instance.PlaySoundClip(11);
+
                 _canJumpAgain = true;
             }
             else
@@ -77,6 +80,9 @@ public class PlayerController : MonoBehaviour
                 if (_canJumpAgain)
                 {
                     _rb.velocity = new Vector2(_rb.velocity.x, _jumpForce);
+
+                    AudioManager.instance.PlaySoundClip(11);
+
                     _canJumpAgain = false;
                 }
             }
