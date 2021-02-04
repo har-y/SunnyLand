@@ -132,5 +132,7 @@ public class PlayerController : MonoBehaviour
     public void Bounce()
     {
         _rb.velocity = new Vector2(_rb.velocity.x, _bounceForce);
+
+        AudioManager.instance.PlaySoundClip(11);
     }
 }

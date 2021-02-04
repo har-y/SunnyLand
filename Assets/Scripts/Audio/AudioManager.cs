@@ -26,7 +26,7 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        PlayMusicClip(4);
     }
 
     // Update is called once per frame
@@ -37,7 +37,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlayMusicClip(int musicClip)
     {
-        if (_musicEnabled || !_audioSource)
+        if (!_musicEnabled || !_audioSource)
         {
             return;
         }

@@ -1686,8 +1686,8 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
+  m_Pitch: 1.21
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1804,7 +1804,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3f623a1b7402feb4897d2903f9ff90b5, type: 3}
   _musicVolume: 0.25
   _fxVolume: 0.2
-  _musicEnabled: 0
+  _musicEnabled: 1
   _fxEnabled: 1
 --- !u!1 &1582042604
 GameObject:
