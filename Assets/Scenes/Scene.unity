@@ -780,7 +780,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &832345118
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1234,6 +1234,7 @@ GameObject:
   - component: {fileID: 1187014599}
   - component: {fileID: 1187014598}
   - component: {fileID: 1187014602}
+  - component: {fileID: 1187014603}
   m_Layer: 5
   m_Name: UI Canvas
   m_TagString: Untagged
@@ -1346,6 +1347,22 @@ MonoBehaviour:
   _heartFull: {fileID: 8109154662235370213, guid: d9a616f95048ea84e8fc6f7920f846b8, type: 3}
   _heartEmpty: {fileID: -4390673095631447188, guid: d9a616f95048ea84e8fc6f7920f846b8, type: 3}
   _gemCounterText: {fileID: 1582042607}
+--- !u!114 &1187014603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187014597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7effa9b9ca8355f47b2bbb28546d1d43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pauseScreen: {fileID: 832345117}
+  _levelSelect: Level Select
+  _mainMenu: Main Menu
+  _pause: 0
 --- !u!1 &1211129688
 GameObject:
   m_ObjectHideFlags: 0
@@ -5257,6 +5274,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4586835154284179820, guid: 4669ebf41178feb40a63cf81656721c7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1187014603}
+    - target: {fileID: 4586835154284179820, guid: 4669ebf41178feb40a63cf81656721c7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LevelSelect
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586835154284179820, guid: 4669ebf41178feb40a63cf81656721c7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIPauseMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4669ebf41178feb40a63cf81656721c7, type: 3}
 --- !u!224 &6654540251703311346 stripped
@@ -5354,6 +5383,18 @@ PrefabInstance:
     - target: {fileID: 4102939141989955230, guid: d6d6f06117726a9408d790f3e3c72055, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102939141989955231, guid: d6d6f06117726a9408d790f3e3c72055, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1187014603}
+    - target: {fileID: 4102939141989955231, guid: d6d6f06117726a9408d790f3e3c72055, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Pause
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102939141989955231, guid: d6d6f06117726a9408d790f3e3c72055, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIPauseMenu, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4102939141989955425, guid: d6d6f06117726a9408d790f3e3c72055, type: 3}
       propertyPath: m_Name
@@ -5455,6 +5496,18 @@ PrefabInstance:
     - target: {fileID: 8286812356850682983, guid: 19e348309254e53459bb358daff48955, type: 3}
       propertyPath: m_Name
       value: Main Menu Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 8286812356850682985, guid: 19e348309254e53459bb358daff48955, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1187014603}
+    - target: {fileID: 8286812356850682985, guid: 19e348309254e53459bb358daff48955, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8286812356850682985, guid: 19e348309254e53459bb358daff48955, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIPauseMenu, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19e348309254e53459bb358daff48955, type: 3}

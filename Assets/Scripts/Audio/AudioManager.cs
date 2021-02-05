@@ -61,4 +61,19 @@ public class AudioManager : MonoBehaviour
     {
         _fxEnabled = !_fxEnabled;
     }
+
+    public void ToggleMusic()
+    {
+        _musicEnabled = !_musicEnabled;
+
+        if (_musicEnabled)
+        {
+            _audioSource.UnPause();
+
+        }
+        else
+        {
+            _audioSource.Pause();
+        }
+    }
 }
