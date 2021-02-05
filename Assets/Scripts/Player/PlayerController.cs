@@ -40,16 +40,19 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_knockBackCounter <= 0)
+        if (!UIPauseMenu.instance._pause)
         {
-            PlayerMove();
-            PlayerJump();
+            if (_knockBackCounter <= 0)
+            {
+                PlayerMove();
+                PlayerJump();
 
-            FlipSprite();
-        }
-        else
-        {
-            PlayerKnockBack();
+                FlipSprite();
+            }
+            else
+            {
+                PlayerKnockBack();
+            }
         }
 
         Animations();

@@ -10,8 +10,14 @@ public class UIPauseMenu : MonoBehaviour
     [SerializeField] private string _levelSelect;
     [SerializeField] private string _mainMenu;
 
-    [SerializeField] private bool _pause;
+    public bool _pause;
 
+    public static UIPauseMenu instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -34,17 +40,19 @@ public class UIPauseMenu : MonoBehaviour
 
         if (_pause)
         {
-            Time.timeScale = 0f;
+            AudioManager.instance.ToggleMusic();
 
             _pauseScreen.SetActive(_pause);
-            AudioManager.instance.ToggleMusic();
+
+            Time.timeScale = 0f;
         }
         else
         {
-            Time.timeScale = 1f;
+            AudioManager.instance.ToggleMusic();
 
             _pauseScreen.SetActive(_pause);
-            AudioManager.instance.ToggleMusic();
+
+            Time.timeScale = 1f;
         }
     }
 
@@ -52,12 +60,16 @@ public class UIPauseMenu : MonoBehaviour
     {
         SceneManager.LoadScene(_levelSelect);
 
+        Time.timeScale = 1f;
+
         Debug.Log("level select");
     }
 
     public void MainMenu()
     {
         SceneManager.LoadScene(_mainMenu);
+
+        Time.timeScale = 1f;
 
         Debug.Log("main menu");
     }
