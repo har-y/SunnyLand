@@ -316,6 +316,7 @@ MonoBehaviour:
   _playerSprite: {fileID: 9012715766864449749}
   _deathEffect: {fileID: 3402003171754654322, guid: 4ea8fb236fb00d14cb07594338ca39f9, type: 3}
   _invincibleTime: 2
+  basicHealth: 3
   healthLimit: 5
   maxHealth: 3
   currentHealth: 0

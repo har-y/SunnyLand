@@ -12,6 +12,7 @@ public class PlayerHealthController : MonoBehaviour
 
     public static PlayerHealthController instance;
 
+    public int basicHealth;
     public int healthLimit;
     public int maxHealth;
     public int currentHealth;
@@ -26,7 +27,7 @@ public class PlayerHealthController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = maxHealth;
+        currentHealth = basicHealth;
     }
 
     // Update is called once per frame
