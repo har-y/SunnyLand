@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LevelEnd : MonoBehaviour
 {
+    [SerializeField] private GameObject _endFlag;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +16,15 @@ public class LevelEnd : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            _endFlag.SetActive(true);
+
+            LevelManager.instance.LevelEnd();
+        }
     }
 }

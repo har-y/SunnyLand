@@ -13,12 +13,14 @@ public class UIController : MonoBehaviour
 
     [SerializeField] private Text _gemCounterText;
 
+    public static UIController instance;
+
+    public GameObject _levelCompleteText;
+
     public float _fadeSpeed;
 
     private bool _fadeOn;
     private bool _fadeOff;
-
-    public static UIController instance;
 
     void Awake()
     {

@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
 
     public static PlayerController instance;
 
+    public bool _stopInput;
+
     private Rigidbody2D _rb;
     private Animator _animator;
 
@@ -40,7 +42,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!UIPauseMenu.instance._pause)
+        if (!UIPauseMenu.instance._pause && !_stopInput)
         {
             if (_knockBackCounter <= 0)
             {

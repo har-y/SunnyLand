@@ -11,10 +11,19 @@ public class CameraController : MonoBehaviour
     [SerializeField] private float _minHeight;
     [SerializeField] private float _maxHeight;
 
+    public static CameraController instance;
+
+    public bool _stopFollow;
+
     private Vector2 _lastPosition;
     private Vector2 _backgroundOffset;
 
     private float _backgroundSpeed = 0.5f;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -25,9 +34,12 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CameraFollow();
+        if (!_stopFollow)
+        {
+            CameraFollow();
 
-        ParallaxBackground();
+            ParallaxBackground();
+        }
     }
 
     private void CameraFollow()

@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] private float _waitTime;
+    [SerializeField] private string _nextLevel;
 
     public static LevelManager instance;
 
@@ -51,5 +53,26 @@ public class LevelManager : MonoBehaviour
         PlayerHealthController.instance.currentHealth = PlayerHealthController.instance.basicHealth;
 
         UIController.instance.UpdateHealthDisplay();
+    }
+
+    public void LevelEnd()
+    {
+        StartCoroutine(LevelEndCoroutine());
+    }
+
+    private IEnumerator LevelEndCoroutine()
+    {
+        PlayerController.instance._stopInput = true;
+        CameraController.instance._stopFollow = true;
+
+        UIController.instance._levelCompleteText.SetActive(true);
+
+        yield return new WaitForSeconds(1.5f);
+
+        UIController.instance.FadeScreenOn();
+
+        yield return new WaitForSeconds((1 / UIController.instance._fadeSpeed) + 0.2f);
+
+        SceneManager.LoadScene(_nextLevel);
     }
 }
