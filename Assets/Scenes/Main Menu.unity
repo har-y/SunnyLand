@@ -504,7 +504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _background: {fileID: 134218964}
-  _startGame: Scene
+  _startGame: Level 1.1
 --- !u!1 &1174898278
 GameObject:
   m_ObjectHideFlags: 0

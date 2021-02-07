@@ -65,9 +65,11 @@ public class LevelManager : MonoBehaviour
         PlayerController.instance._stopInput = true;
         CameraController.instance._stopFollow = true;
 
+        AudioManager.instance.PlayMusicClip(3);
+
         UIController.instance._levelCompleteText.SetActive(true);
 
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2f);
 
         UIController.instance.FadeScreenOn();
 
