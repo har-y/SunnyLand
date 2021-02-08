@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Pack
       objectReference: {fileID: 0}
+    - target: {fileID: 7905441482669160320, guid: f2e85ce3493ead54e9f6e7088a9a518d, type: 3}
+      propertyPath: _nextLevel
+      value: Level 1.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2e85ce3493ead54e9f6e7088a9a518d, type: 3}
 --- !u!114 &116654233 stripped
