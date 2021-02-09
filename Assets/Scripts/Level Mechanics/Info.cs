@@ -20,7 +20,6 @@ public class Info : MonoBehaviour
     [SerializeField] private string _infoTitle;
     [SerializeField] private string _infoMessage;
 
-    private bool _showInfo;
 
     // Start is called before the first frame update
     void Start()
@@ -52,7 +51,6 @@ public class Info : MonoBehaviour
         if (collision.tag == "Player")
         {
             DeactivateInfo();
-            _showInfo = false;
         }
     }
 
