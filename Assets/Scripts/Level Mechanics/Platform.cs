@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
+    [SerializeField] private bool _dropPlatform;
+
     [SerializeField] private bool _respawn;
     [SerializeField] private float _respawnTime;
 
     private Rigidbody2D _rb;
 
     private Vector2 _startPosition;
+
+    private bool _changeDirection;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +32,10 @@ public class Platform : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            DropPlatform();
+            if (_dropPlatform)
+            {
+                DropPlatform();
+            }
         }
     }
 

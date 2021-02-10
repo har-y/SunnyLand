@@ -202,5 +202,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5688607adeb8b1243bd2a2601bc4340f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _dropPlatform: 1
+  _movePlatform: 0
+  _leftPoint: {fileID: 0}
+  _rightPoint: {fileID: 0}
+  _moveSpeed: 3
+  _moveTime: 0
   _respawn: 1
   _respawnTime: 2
