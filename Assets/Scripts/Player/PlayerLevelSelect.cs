@@ -38,24 +38,21 @@ public class PlayerLevelSelect : MonoBehaviour
                     SetNextPoint(_currentPoint._up);
                 }
             }
-
-            if (Input.GetAxisRaw("Vertical") < -0.5f)
+            else if (Input.GetAxisRaw("Vertical") < -0.5f)
             {
                 if (_currentPoint._down != null)
                 {
                     SetNextPoint(_currentPoint._down);
                 }
             }
-
-            if (Input.GetAxisRaw("Horizontal") > 0.5f)
+            else if(Input.GetAxisRaw("Horizontal") > 0.5f)
             {
                 if (_currentPoint._right != null)
                 {
                     SetNextPoint(_currentPoint._right);
                 }
             }
-
-            if (Input.GetAxisRaw("Horizontal") < -0.5f)
+            else if (Input.GetAxisRaw("Horizontal") < -0.5f)
             {
                 if (_currentPoint._left != null)
                 {
