@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class MapPoint : MonoBehaviour
 {
-    [SerializeField] private MapPoint _up;
-    [SerializeField] private MapPoint _down;
-    [SerializeField] private MapPoint _left;
-    [SerializeField] private MapPoint _right;
+    public MapPoint _up;
+    public MapPoint _down;
+    public MapPoint _left;
+    public MapPoint _right;
 
     [SerializeField] private bool _isLevel;
 

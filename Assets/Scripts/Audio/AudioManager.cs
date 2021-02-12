@@ -9,6 +9,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip[] _audioClips;
     [SerializeField] private AudioClip[] _musicClips;
 
+    [SerializeField] private int _trackID;
+
     [Range(0f, 1f)] [SerializeField] private float _musicVolume;
     [Range(0f, 1f)] [SerializeField] private float _fxVolume;
 
@@ -26,7 +28,7 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayMusicClip(4);
+        PlayMusicClip(_trackID);
     }
 
     // Update is called once per frame
