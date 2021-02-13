@@ -15955,7 +15955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fadeScreen: {fileID: 2155918685206412119}
-  _fadeSpeed: 2
+  _fadeSpeed: 1
 --- !u!1001 &6305906447248336338
 PrefabInstance:
   m_ObjectHideFlags: 0
