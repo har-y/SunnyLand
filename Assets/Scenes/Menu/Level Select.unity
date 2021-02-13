@@ -15954,6 +15954,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43ff7aad45411d84caacd44ff54881a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _fadeScreen: {fileID: 2155918685206412119}
+  _fadeSpeed: 2
 --- !u!1001 &6305906447248336338
 PrefabInstance:
   m_ObjectHideFlags: 0

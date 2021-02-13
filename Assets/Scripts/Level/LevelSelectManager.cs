@@ -7,8 +7,6 @@ public class LevelSelectManager : MonoBehaviour
 {
     [SerializeField] private PlayerLevelSelect _player;
 
-    [SerializeField] private float _waitTime;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +26,9 @@ public class LevelSelectManager : MonoBehaviour
 
     private IEnumerator LoadLevelCoroutine()
     {
-        yield return new WaitForSeconds(_waitTime);
+        UILevelSelectController.instance.FadeScreenOn();
+
+        yield return new WaitForSeconds((1f / UILevelSelectController.instance._fadeSpeed) + 0.2f);
 
         SceneManager.LoadScene(_player.currentPoint.levelToLoad);
     }

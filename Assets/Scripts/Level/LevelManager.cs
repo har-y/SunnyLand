@@ -73,7 +73,7 @@ public class LevelManager : MonoBehaviour
 
         UIController.instance.FadeScreenOn();
 
-        yield return new WaitForSeconds((1 / UIController.instance._fadeSpeed) + 0.2f);
+        yield return new WaitForSeconds((1f / UIController.instance._fadeSpeed) + 0.2f);
 
         SceneManager.LoadScene(_nextLevel);
     }
