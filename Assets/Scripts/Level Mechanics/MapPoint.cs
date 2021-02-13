@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class MapPoint : MonoBehaviour
 {
-    public MapPoint _up;
-    public MapPoint _down;
-    public MapPoint _left;
-    public MapPoint _right;
+    public MapPoint up;
+    public MapPoint down;
+    public MapPoint left;
+    public MapPoint right;
 
-    public bool _isLevel;
+    public bool isLevel;
 
-    public string _loadLevel;
+    public string levelToLoad;
 
     // Start is called before the first frame update
     void Start()

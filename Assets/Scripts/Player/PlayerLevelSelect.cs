@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PlayerLevelSelect : MonoBehaviour
 {
-    [SerializeField] private MapPoint _currentPoint;
-
     [SerializeField] private float _moveSpeed;
+
+    public MapPoint currentPoint;
+
+    public LevelSelectManager _lsManager;
 
     private bool _levelLoading;
 
@@ -24,49 +26,51 @@ public class PlayerLevelSelect : MonoBehaviour
 
     private void PlayerCurrentPoint()
     {
-        transform.position = Vector3.MoveTowards(transform.position, _currentPoint.transform.position, _moveSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, currentPoint.transform.position, _moveSpeed * Time.deltaTime);
 
         PlayerMove();
     }
 
     private void PlayerMove()
     {
-        if (Vector3.Distance(transform.position, _currentPoint.transform.position) < 0.1f && !_levelLoading)
+        if (Vector3.Distance(transform.position, currentPoint.transform.position) < 0.1f && !_levelLoading)
         {
             if (Input.GetAxisRaw("Vertical") > 0.5f)
             {
-                if (_currentPoint._up != null)
+                if (currentPoint.up != null)
                 {
-                    SetNextPoint(_currentPoint._up);
+                    SetNextPoint(currentPoint.up);
                 }
             }
             else if (Input.GetAxisRaw("Vertical") < -0.5f)
             {
-                if (_currentPoint._down != null)
+                if (currentPoint.down != null)
                 {
-                    SetNextPoint(_currentPoint._down);
+                    SetNextPoint(currentPoint.down);
                 }
             }
             else if(Input.GetAxisRaw("Horizontal") > 0.5f)
             {
-                if (_currentPoint._right != null)
+                if (currentPoint.right != null)
                 {
-                    SetNextPoint(_currentPoint._right);
+                    SetNextPoint(currentPoint.right);
                 }
             }
             else if (Input.GetAxisRaw("Horizontal") < -0.5f)
             {
-                if (_currentPoint._left != null)
+                if (currentPoint.left != null)
                 {
-                    SetNextPoint(_currentPoint._left);
+                    SetNextPoint(currentPoint.left);
                 }
             }
 
-            if (_currentPoint._isLevel)
+            if (currentPoint.isLevel)
             {
                 if (Input.GetButtonDown("Jump"))
                 {
                     _levelLoading = true;
+
+                    _lsManager.LoadLevel();
                 }
             }
         }
@@ -74,6 +78,6 @@ public class PlayerLevelSelect : MonoBehaviour
 
     private void SetNextPoint(MapPoint nextPoint)
     {
-        _currentPoint = nextPoint;
+        currentPoint = nextPoint;
     }
 }
