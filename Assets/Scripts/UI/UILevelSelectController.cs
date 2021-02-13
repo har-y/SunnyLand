@@ -9,7 +9,7 @@ public class UILevelSelectController : MonoBehaviour
 
     public static UILevelSelectController instance;
 
-    public float _fadeSpeed;
+    public float fadeSpeed;
 
     private bool _fadeOn;
     private bool _fadeOff;
@@ -36,7 +36,7 @@ public class UILevelSelectController : MonoBehaviour
     {
         if (_fadeOn)
         {
-            _fadeScreen.color = new Color(_fadeScreen.color.r, _fadeScreen.color.g, _fadeScreen.color.b, Mathf.MoveTowards(_fadeScreen.color.a, 1f, _fadeSpeed * Time.deltaTime));
+            _fadeScreen.color = new Color(_fadeScreen.color.r, _fadeScreen.color.g, _fadeScreen.color.b, Mathf.MoveTowards(_fadeScreen.color.a, 1f, fadeSpeed * Time.deltaTime));
             if (_fadeScreen.color.a == 1f)
             {
                 _fadeOn = false;
@@ -44,7 +44,7 @@ public class UILevelSelectController : MonoBehaviour
         }
         else if (_fadeOff)
         {
-            _fadeScreen.color = new Color(_fadeScreen.color.r, _fadeScreen.color.g, _fadeScreen.color.b, Mathf.MoveTowards(_fadeScreen.color.a, 0f, _fadeSpeed * Time.deltaTime));
+            _fadeScreen.color = new Color(_fadeScreen.color.r, _fadeScreen.color.g, _fadeScreen.color.b, Mathf.MoveTowards(_fadeScreen.color.a, 0f, fadeSpeed * Time.deltaTime));
             if (_fadeScreen.color.a == 0f)
             {
                 _fadeOff = false;

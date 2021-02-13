@@ -38,11 +38,11 @@ public class LevelManager : MonoBehaviour
     {
         PlayerController.instance.gameObject.SetActive(false);
 
-        yield return new WaitForSeconds(_waitTime - (1 / UIController.instance._fadeSpeed));
+        yield return new WaitForSeconds(_waitTime - (1 / UIController.instance.fadeSpeed));
 
         UIController.instance.FadeScreenOn();
 
-        yield return new WaitForSeconds((1 / UIController.instance._fadeSpeed) + 0.2f);
+        yield return new WaitForSeconds((1 / UIController.instance.fadeSpeed) + 0.2f);
 
         UIController.instance.FadeScreenOff();
 
@@ -62,18 +62,18 @@ public class LevelManager : MonoBehaviour
 
     private IEnumerator LevelEndCoroutine()
     {
-        PlayerController.instance._stopInput = true;
-        CameraController.instance._stopFollow = true;
+        PlayerController.instance.stopInput = true;
+        CameraController.instance.stopFollow = true;
 
         AudioManager.instance.PlayMusicClip(3);
 
-        UIController.instance._levelCompleteText.SetActive(true);
+        UIController.instance.levelCompleteText.SetActive(true);
 
         yield return new WaitForSeconds(2f);
 
         UIController.instance.FadeScreenOn();
 
-        yield return new WaitForSeconds((1f / UIController.instance._fadeSpeed) + 0.2f);
+        yield return new WaitForSeconds((1f / UIController.instance.fadeSpeed) + 0.2f);
 
         SceneManager.LoadScene(_nextLevel);
     }

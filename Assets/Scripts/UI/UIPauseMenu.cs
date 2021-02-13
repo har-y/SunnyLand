@@ -10,7 +10,7 @@ public class UIPauseMenu : MonoBehaviour
     [SerializeField] private string _levelSelect;
     [SerializeField] private string _mainMenu;
 
-    public bool _pause;
+    public bool pause;
 
     public static UIPauseMenu instance;
 
@@ -36,13 +36,13 @@ public class UIPauseMenu : MonoBehaviour
 
     public void Pause()
     {
-        _pause = !_pause;
+        pause = !pause;
 
-        if (_pause)
+        if (pause)
         {
             AudioManager.instance.ToggleMusic();
 
-            _pauseScreen.SetActive(_pause);
+            _pauseScreen.SetActive(pause);
 
             Time.timeScale = 0f;
         }
@@ -50,7 +50,7 @@ public class UIPauseMenu : MonoBehaviour
         {
             AudioManager.instance.ToggleMusic();
 
-            _pauseScreen.SetActive(_pause);
+            _pauseScreen.SetActive(pause);
 
             Time.timeScale = 1f;
         }

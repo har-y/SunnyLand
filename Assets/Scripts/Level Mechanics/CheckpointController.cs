@@ -10,7 +10,6 @@ public class CheckpointController : MonoBehaviour
 
     private Vector3 _spawnPosition;
 
-
     void Awake()
     {
         instance = this;

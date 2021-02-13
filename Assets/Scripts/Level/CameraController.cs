@@ -13,7 +13,7 @@ public class CameraController : MonoBehaviour
 
     public static CameraController instance;
 
-    public bool _stopFollow;
+    public bool stopFollow;
 
     private Vector2 _lastPosition;
     private Vector2 _backgroundOffset;
@@ -34,7 +34,7 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!_stopFollow)
+        if (!stopFollow)
         {
             CameraFollow();
 

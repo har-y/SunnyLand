@@ -28,7 +28,7 @@ public class LevelSelectManager : MonoBehaviour
     {
         UILevelSelectController.instance.FadeScreenOn();
 
-        yield return new WaitForSeconds((1f / UILevelSelectController.instance._fadeSpeed) + 0.2f);
+        yield return new WaitForSeconds((1f / UILevelSelectController.instance.fadeSpeed) + 0.2f);
 
         SceneManager.LoadScene(_player.currentPoint.levelToLoad);
     }

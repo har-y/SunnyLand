@@ -8,7 +8,7 @@ public class PlayerLevelSelect : MonoBehaviour
 
     public MapPoint currentPoint;
 
-    public LevelSelectManager _lsManager;
+    public LevelSelectManager lsManager;
 
     private bool _levelLoading;
 
@@ -64,13 +64,13 @@ public class PlayerLevelSelect : MonoBehaviour
                 }
             }
 
-            if (currentPoint.isLevel)
+            if (currentPoint.isLevel && currentPoint.levelToLoad != "" && !currentPoint.isLocked)
             {
                 if (Input.GetButtonDown("Jump"))
                 {
                     _levelLoading = true;
 
-                    _lsManager.LoadLevel();
+                    lsManager.LoadLevel();
                 }
             }
         }

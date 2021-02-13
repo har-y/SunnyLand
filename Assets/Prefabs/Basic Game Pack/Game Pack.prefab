@@ -3448,8 +3448,8 @@ MonoBehaviour:
   _heartFull: {fileID: 8109154662235370213, guid: d9a616f95048ea84e8fc6f7920f846b8, type: 3}
   _heartEmpty: {fileID: -4390673095631447188, guid: d9a616f95048ea84e8fc6f7920f846b8, type: 3}
   _gemCounterText: {fileID: 7905441482885151899}
-  _levelCompleteText: {fileID: 7905441482117798227}
-  _fadeSpeed: 1
+  levelCompleteText: {fileID: 7905441482117798227}
+  fadeSpeed: 1
 --- !u!114 &7905441482760115903
 MonoBehaviour:
   m_ObjectHideFlags: 0
