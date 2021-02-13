@@ -9,7 +9,9 @@ public class MapPoint : MonoBehaviour
     public MapPoint _left;
     public MapPoint _right;
 
-    [SerializeField] private bool _isLevel;
+    public bool _isLevel;
+
+    public string _loadLevel;
 
     // Start is called before the first frame update
     void Start()

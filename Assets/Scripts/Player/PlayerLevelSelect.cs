@@ -8,6 +8,8 @@ public class PlayerLevelSelect : MonoBehaviour
 
     [SerializeField] private float _moveSpeed;
 
+    private bool _levelLoading;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +31,7 @@ public class PlayerLevelSelect : MonoBehaviour
 
     private void PlayerMove()
     {
-        if (Vector3.Distance(transform.position, _currentPoint.transform.position) < 0.1f)
+        if (Vector3.Distance(transform.position, _currentPoint.transform.position) < 0.1f && !_levelLoading)
         {
             if (Input.GetAxisRaw("Vertical") > 0.5f)
             {
@@ -57,6 +59,14 @@ public class PlayerLevelSelect : MonoBehaviour
                 if (_currentPoint._left != null)
                 {
                     SetNextPoint(_currentPoint._left);
+                }
+            }
+
+            if (_currentPoint._isLevel)
+            {
+                if (Input.GetButtonDown("Jump"))
+                {
+                    _levelLoading = true;
                 }
             }
         }
