@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class UILevelSelectController : MonoBehaviour
 {
     [SerializeField] private GameObject _infoPanel;
+
     [SerializeField] private Text _levelName;
+
     [SerializeField] private Image _fadeScreen;
 
     public static UILevelSelectController instance;
@@ -64,5 +66,17 @@ public class UILevelSelectController : MonoBehaviour
     {
         _fadeOn = false;
         _fadeOff = true;
+    }
+
+    public void ShowInfo(MapPoint info)
+    {
+        _levelName.text = info.levelName;
+
+        _infoPanel.SetActive(true);
+    }
+
+    public void HideInfo()
+    {
+        _infoPanel.SetActive(false);
     }
 }

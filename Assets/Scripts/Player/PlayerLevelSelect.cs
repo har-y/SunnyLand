@@ -66,6 +66,8 @@ public class PlayerLevelSelect : MonoBehaviour
 
             if (currentPoint.isLevel && currentPoint.levelToLoad != "" && !currentPoint.isLocked)
             {
+                UILevelSelectController.instance.ShowInfo(currentPoint);
+
                 if (Input.GetButtonDown("Jump"))
                 {
                     _levelLoading = true;
@@ -79,5 +81,7 @@ public class PlayerLevelSelect : MonoBehaviour
     private void SetNextPoint(MapPoint nextPoint)
     {
         currentPoint = nextPoint;
+
+        UILevelSelectController.instance.HideInfo();
     }
 }
