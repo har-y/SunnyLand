@@ -2710,7 +2710,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7905441482760115901}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2892,7 +2892,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7905441482760115901}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3131,7 +3131,7 @@ RectTransform:
   - {fileID: 7905441483103001783}
   - {fileID: 7905441482291578547}
   m_Father: {fileID: 7905441482760115901}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3353,9 +3353,9 @@ RectTransform:
   - {fileID: 7905441482368119961}
   - {fileID: 7905441482591301165}
   - {fileID: 7905441483146724295}
+  - {fileID: 7905441481692845935}
   - {fileID: 7905441482479314282}
   - {fileID: 7905441482117798236}
-  - {fileID: 7905441481692845935}
   - {fileID: 2542157116549303749}
   m_Father: {fileID: 4464035571953770957}
   m_RootOrder: 5
@@ -3465,7 +3465,7 @@ MonoBehaviour:
   _pauseScreen: {fileID: 7905441482479314281}
   _levelSelect: Level Select
   _mainMenu: Main Menu
-  _pause: 0
+  pause: 0
 --- !u!1 &7905441482885151896
 GameObject:
   m_ObjectHideFlags: 0
