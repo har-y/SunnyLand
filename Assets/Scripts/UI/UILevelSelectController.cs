@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class UILevelSelectController : MonoBehaviour
 {
+    [SerializeField] private GameObject _infoPanel;
+    [SerializeField] private Text _levelName;
     [SerializeField] private Image _fadeScreen;
 
     public static UILevelSelectController instance;
