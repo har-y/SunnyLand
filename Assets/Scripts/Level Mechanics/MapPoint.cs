@@ -16,6 +16,12 @@ public class MapPoint : MonoBehaviour
     public string levelToLoad;
     public string levelToCheck;
 
+    public int gemsCollected;
+    public int gemsTotal;
+
+    public float time;
+    public float timeBest;
+
     // Start is called before the first frame update
     void Start()
     {

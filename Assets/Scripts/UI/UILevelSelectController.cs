@@ -8,6 +8,10 @@ public class UILevelSelectController : MonoBehaviour
     [SerializeField] private GameObject _infoPanel;
 
     [SerializeField] private Text _levelName;
+    [SerializeField] private Text _gems;
+    [SerializeField] private Text _gemsBest;
+    [SerializeField] private Text _time;
+    [SerializeField] private Text _timeBest;
 
     [SerializeField] private Image _fadeScreen;
 
@@ -71,6 +75,20 @@ public class UILevelSelectController : MonoBehaviour
     public void ShowInfo(MapPoint info)
     {
         _levelName.text = info.levelTitle;
+
+        _gems.text = "FOUND:" + " " + info.gemsTotal;
+        _gemsBest.text = "BEST:" + " " + info.gemsCollected;
+
+        _time.text = "TARGET:" + " " + info.time + "s";
+
+        if (info.timeBest == 0)
+        {
+            _timeBest.text = "BEST:" + " " + "---";
+        }
+        else
+        {
+            _timeBest.text = "BEST:" + " " + info.timeBest.ToString("F2") + "s";
+        }
 
         _infoPanel.SetActive(true);
     }
