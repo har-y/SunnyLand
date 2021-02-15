@@ -87,7 +87,7 @@ public class UILevelSelectController : MonoBehaviour
         }
         else
         {
-            _timeBest.text = "BEST:" + " " + info.timeBest.ToString("F2") + "s";
+            _timeBest.text = "BEST:" + " " + info.timeBest.ToString("F2").Replace(",",".") + "s";
         }
 
         _infoPanel.SetActive(true);
