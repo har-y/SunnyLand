@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] private float _waitTime;
+
     [SerializeField] private string _nextLevel;
 
     public static LevelManager instance;

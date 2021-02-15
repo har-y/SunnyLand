@@ -70,7 +70,7 @@ public class UILevelSelectController : MonoBehaviour
 
     public void ShowInfo(MapPoint info)
     {
-        _levelName.text = info.levelName;
+        _levelName.text = info.levelTitle;
 
         _infoPanel.SetActive(true);
     }

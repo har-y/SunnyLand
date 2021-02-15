@@ -12,7 +12,7 @@ public class MapPoint : MonoBehaviour
     public bool isLevel;
     public bool isLocked;
 
-    public string levelName;
+    public string levelTitle;
     public string levelToLoad;
     public string levelToCheck;
 

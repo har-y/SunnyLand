@@ -15439,6 +15439,10 @@ PrefabInstance:
       value: Level 1.2
       objectReference: {fileID: 0}
     - target: {fileID: -204070895806055093, guid: 993a941c492e8aa498e0e0d8e8df35b3, type: 3}
+      propertyPath: levelTitle
+      value: Level 2.
+      objectReference: {fileID: 0}
+    - target: {fileID: -204070895806055093, guid: 993a941c492e8aa498e0e0d8e8df35b3, type: 3}
       propertyPath: levelToLoad
       value: Level 1.2
       objectReference: {fileID: 0}
@@ -16216,6 +16220,10 @@ PrefabInstance:
     - target: {fileID: -204070895806055093, guid: 993a941c492e8aa498e0e0d8e8df35b3, type: 3}
       propertyPath: _loadLevel
       value: Level 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -204070895806055093, guid: 993a941c492e8aa498e0e0d8e8df35b3, type: 3}
+      propertyPath: levelTitle
+      value: Level 1.
       objectReference: {fileID: 0}
     - target: {fileID: -204070895806055093, guid: 993a941c492e8aa498e0e0d8e8df35b3, type: 3}
       propertyPath: levelToLoad
