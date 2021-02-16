@@ -13,6 +13,8 @@ public class LevelManager : MonoBehaviour
 
     public int gemCollected;
 
+    public float levelTime;
+
     private void Awake()
     {
         instance = this;
@@ -22,12 +24,14 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         AudioManager.instance.PlayMusicClip(4);
+
+        levelTime = 0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        levelTime += Time.deltaTime;
     }
 
     public void RespawnPlayer()
@@ -77,6 +81,9 @@ public class LevelManager : MonoBehaviour
         yield return new WaitForSeconds((1f / UIController.instance.fadeSpeed) + 0.2f);
 
         PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_unlocked", 1);
+        PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_gems", gemCollected);
+
+        PlayerPrefs.SetFloat(SceneManager.GetActiveScene().name + "_time", levelTime);
 
         SceneManager.LoadScene(_nextLevel);
     }
