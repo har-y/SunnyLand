@@ -18,7 +18,7 @@ public class MapPoint : MonoBehaviour
     public string levelToCheck;
 
     public int gemsCollected;
-    public int gemsTotal;
+    public int gemsInLevel;
 
     public float time;
     public float timeBest;
@@ -41,7 +41,7 @@ public class MapPoint : MonoBehaviour
                 timeBest = PlayerPrefs.GetFloat(levelToLoad + "_time");
             }
 
-            if (gemsCollected >= gemsTotal)
+            if (gemsCollected >= gemsInLevel && gemsInLevel != 0)
             {
                 gemBadge.SetActive(true);
             }

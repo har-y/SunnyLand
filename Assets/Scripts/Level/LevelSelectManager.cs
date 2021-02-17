@@ -7,10 +7,14 @@ public class LevelSelectManager : MonoBehaviour
 {
     [SerializeField] private PlayerLevelSelect _player;
 
+    private MapPoint[] _allPoints;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        _allPoints = FindObjectsOfType<MapPoint>();
+
+        LoadCurrentPoint();
     }
 
     // Update is called once per frame
@@ -31,5 +35,20 @@ public class LevelSelectManager : MonoBehaviour
         yield return new WaitForSeconds((1f / UILevelSelectController.instance.fadeSpeed) + 0.2f);
 
         SceneManager.LoadScene(_player.currentPoint.levelToLoad);
+    }
+
+    private void LoadCurrentPoint()
+    {
+        if (PlayerPrefs.HasKey("CurrentLevel"))
+        {
+            foreach (MapPoint point in _allPoints)
+            {
+                if (point.levelToLoad == PlayerPrefs.GetString("CurrentLevel"))
+                {
+                    _player.transform.position = point.transform.position;
+                    _player.currentPoint = point;
+                }
+            }
+        }
     }
 }

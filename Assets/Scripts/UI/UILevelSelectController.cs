@@ -9,7 +9,7 @@ public class UILevelSelectController : MonoBehaviour
 
     [SerializeField] private Text _levelName;
     [SerializeField] private Text _gems;
-    [SerializeField] private Text _gemsBest;
+    [SerializeField] private Text _gemsInLevel;
     [SerializeField] private Text _time;
     [SerializeField] private Text _timeBest;
 
@@ -26,7 +26,6 @@ public class UILevelSelectController : MonoBehaviour
     {
         instance = this;
     }
-
 
     // Start is called before the first frame update
     void Start()
@@ -76,8 +75,8 @@ public class UILevelSelectController : MonoBehaviour
     {
         _levelName.text = info.levelTitle;
 
-        _gems.text = "FOUND:" + " " + info.gemsTotal;
-        _gemsBest.text = "BEST:" + " " + info.gemsCollected;
+        _gems.text = "FOUND:" + " " + info.gemsInLevel;
+        _gemsInLevel.text = "LEVEL GEM's:" + " " + info.gemsCollected;
 
         _time.text = "TARGET:" + " " + info.time + "s";
 

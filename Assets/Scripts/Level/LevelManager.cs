@@ -82,6 +82,8 @@ public class LevelManager : MonoBehaviour
 
         PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_unlocked", 1);
 
+        PlayerPrefs.SetString("CurrentLevel", SceneManager.GetActiveScene().name);
+
         SaveGemsCollected();
 
         SavePlayTime();
@@ -94,7 +96,7 @@ public class LevelManager : MonoBehaviour
     {
         if (PlayerPrefs.HasKey(SceneManager.GetActiveScene().name + "_gems"))
         {
-            if (gemCollected > PlayerPrefs.GetFloat(SceneManager.GetActiveScene().name + "_gems", gemCollected))
+            if (gemCollected > PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "_gems", gemCollected))
             {
                 PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_gems", gemCollected);
             }

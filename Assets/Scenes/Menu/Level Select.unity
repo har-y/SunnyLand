@@ -153,11 +153,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1946449377}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -350, y: -65}
+  m_AnchoredPosition: {x: -350, y: -5}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &42093719
@@ -12308,7 +12308,7 @@ GameObject:
   - component: {fileID: 468218128}
   - component: {fileID: 468218127}
   m_Layer: 5
-  m_Name: Level Gem Best Text
+  m_Name: Level Gem Level Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12326,7 +12326,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1946449377}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -12405,11 +12405,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1946449377}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -350, y: -5}
+  m_AnchoredPosition: {x: -350, y: -65}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &516992100
@@ -15906,7 +15906,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -204070895806055093, guid: 993a941c492e8aa498e0e0d8e8df35b3, type: 3}
       propertyPath: levelTitle
-      value: Level 2.
+      value: Level 2
       objectReference: {fileID: 0}
     - target: {fileID: -204070895806055093, guid: 993a941c492e8aa498e0e0d8e8df35b3, type: 3}
       propertyPath: levelToLoad
@@ -16091,7 +16091,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1946449377}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -16217,12 +16217,12 @@ RectTransform:
   - {fileID: 1925205079}
   - {fileID: 138917672}
   - {fileID: 869599884}
-  - {fileID: 516992099}
   - {fileID: 42093718}
+  - {fileID: 516992099}
   - {fileID: 1453307456}
   - {fileID: 1958953882}
-  - {fileID: 468218126}
   - {fileID: 1934141040}
+  - {fileID: 468218126}
   m_Father: {fileID: 1951257836}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16664,7 +16664,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!222 &2155918685206412118
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16821,7 +16821,7 @@ MonoBehaviour:
   _infoPanel: {fileID: 1951257835}
   _levelName: {fileID: 1925205080}
   _gems: {fileID: 1934141041}
-  _gemsBest: {fileID: 468218127}
+  _gemsInLevel: {fileID: 468218127}
   _time: {fileID: 42093719}
   _timeBest: {fileID: 516992100}
   _fadeScreen: {fileID: 2155918685206412119}
@@ -16871,7 +16871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -204070895806055093, guid: 993a941c492e8aa498e0e0d8e8df35b3, type: 3}
       propertyPath: levelTitle
-      value: Level 1.
+      value: Level 1
       objectReference: {fileID: 0}
     - target: {fileID: -204070895806055093, guid: 993a941c492e8aa498e0e0d8e8df35b3, type: 3}
       propertyPath: levelToLoad
