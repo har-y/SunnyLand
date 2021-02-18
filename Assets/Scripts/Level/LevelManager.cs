@@ -67,10 +67,10 @@ public class LevelManager : MonoBehaviour
 
     private IEnumerator LevelEndCoroutine()
     {
+        AudioManager.instance.PlayMusicClip(3);
+
         PlayerController.instance.stopInput = true;
         CameraController.instance.stopFollow = true;
-
-        AudioManager.instance.PlayMusicClip(3);
 
         UIController.instance.levelCompleteText.SetActive(true);
 
