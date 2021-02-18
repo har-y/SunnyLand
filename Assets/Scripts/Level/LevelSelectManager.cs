@@ -30,6 +30,8 @@ public class LevelSelectManager : MonoBehaviour
 
     private IEnumerator LoadLevelCoroutine()
     {
+        AudioManager.instance.PlaySoundClip(5);
+
         UILevelSelectController.instance.FadeScreenOn();
 
         yield return new WaitForSeconds((1f / UILevelSelectController.instance.fadeSpeed) + 0.2f);

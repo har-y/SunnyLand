@@ -83,5 +83,7 @@ public class PlayerLevelSelect : MonoBehaviour
         currentPoint = nextPoint;
 
         UILevelSelectController.instance.HideInfo();
+
+        AudioManager.instance.PlaySoundClip(6);
     }
 }
