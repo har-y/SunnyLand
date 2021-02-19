@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9140908425087524895}
   - component: {fileID: 9140908425087524892}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: platform_body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,9 +95,9 @@ GameObject:
   - component: {fileID: 9140908425454399536}
   - component: {fileID: 7764584436636616710}
   - component: {fileID: 9140908425454399537}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -203,10 +203,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dropPlatform: 1
-  _movePlatform: 0
-  _leftPoint: {fileID: 0}
-  _rightPoint: {fileID: 0}
-  _moveSpeed: 3
-  _moveTime: 0
   _respawn: 1
   _respawnTime: 2

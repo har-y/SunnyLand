@@ -5,6 +5,7 @@ using UnityEngine;
 public class Platform : MonoBehaviour
 {
     [SerializeField] private bool _dropPlatform;
+    [SerializeField] private bool _oneWayPlatform;
 
     [SerializeField] private bool _respawn;
     [SerializeField] private float _respawnTime;
@@ -35,6 +36,11 @@ public class Platform : MonoBehaviour
             if (_dropPlatform)
             {
                 DropPlatform();
+            }
+
+            if (_oneWayPlatform)
+            {
+                Debug.Log("collision");
             }
         }
     }

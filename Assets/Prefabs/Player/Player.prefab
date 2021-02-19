@@ -295,12 +295,13 @@ MonoBehaviour:
   _groundPoint: {fileID: 9012715768058913429}
   _ground:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 640
   _moveSpeed: 8
   _jumpForce: 15
   _bounceForce: 12
   _knockBackTime: 0.5
   _knockBackForce: 10
+  stopInput: 0
 --- !u!114 &4448010560405291881
 MonoBehaviour:
   m_ObjectHideFlags: 0
