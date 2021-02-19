@@ -1146,6 +1146,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Continue Game Button
       objectReference: {fileID: 0}
+    - target: {fileID: 2756841248589844296, guid: 4f587d961a52cc5428f58862c33b26cd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f587d961a52cc5428f58862c33b26cd, type: 3}
 --- !u!1 &1564643926719270145 stripped

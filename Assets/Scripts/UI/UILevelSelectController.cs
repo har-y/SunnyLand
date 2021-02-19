@@ -75,8 +75,8 @@ public class UILevelSelectController : MonoBehaviour
     {
         _levelName.text = info.levelTitle;
 
-        _gems.text = "FOUND:" + " " + info.gemsInLevel;
-        _gemsInLevel.text = "LEVEL GEM's:" + " " + info.gemsCollected;
+        _gems.text = "FOUND:" + " " + info.gemsCollected;
+        _gemsInLevel.text = "LEVEL GEM's:" + " " + info.gemsInLevel;
 
         _time.text = "TARGET:" + " " + info.time + "s";
 
