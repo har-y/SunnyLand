@@ -5,10 +5,14 @@ using UnityEngine;
 public class Platform : MonoBehaviour
 {
     [SerializeField] private bool _dropPlatform;
-    [SerializeField] private bool _oneWayPlatform;
-
     [SerializeField] private bool _respawn;
     [SerializeField] private float _respawnTime;
+
+    [SerializeField] private bool _movingPlatform;
+    [SerializeField] private Transform[] _points;
+    [SerializeField] private int _currentPoint;
+    [SerializeField] private float _platformSpeed;
+    [SerializeField] private Transform _platform;
 
     private Rigidbody2D _rb;
 
@@ -26,7 +30,20 @@ public class Platform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (_movingPlatform)
+        {
+            _platform.position = Vector3.MoveTowards(_platform.position, _points[_currentPoint].position, _platformSpeed * Time.deltaTime);
 
+            if (Vector3.Distance(_platform.position, _points[_currentPoint].position) <= 0.05f)
+            {
+                _currentPoint++;
+
+                if (_currentPoint >= _points.Length)
+                {
+                    _currentPoint = 0;
+                }
+            }
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -35,12 +52,9 @@ public class Platform : MonoBehaviour
         {
             if (_dropPlatform)
             {
-                DropPlatform();
-            }
+                Debug.Log("drop platform");
 
-            if (_oneWayPlatform)
-            {
-                Debug.Log("collision");
+                DropPlatform();
             }
         }
     }
