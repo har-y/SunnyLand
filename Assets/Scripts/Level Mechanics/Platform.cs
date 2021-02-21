@@ -30,20 +30,7 @@ public class Platform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_movingPlatform)
-        {
-            _platform.position = Vector3.MoveTowards(_platform.position, _points[_currentPoint].position, _platformSpeed * Time.deltaTime);
-
-            if (Vector3.Distance(_platform.position, _points[_currentPoint].position) <= 0.05f)
-            {
-                _currentPoint++;
-
-                if (_currentPoint >= _points.Length)
-                {
-                    _currentPoint = 0;
-                }
-            }
-        }
+        MovingPlatform();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -85,5 +72,23 @@ public class Platform : MonoBehaviour
         _rb.isKinematic = true;
         _rb.velocity = new Vector3(0f, 0f, 0f);
         transform.position = _startPosition;
+    }
+
+    private void MovingPlatform()
+    {
+        if (_movingPlatform)
+        {
+            _platform.position = Vector3.MoveTowards(_platform.position, _points[_currentPoint].position, _platformSpeed * Time.deltaTime);
+
+            if (Vector3.Distance(_platform.position, _points[_currentPoint].position) <= 0.05f)
+            {
+                _currentPoint++;
+
+                if (_currentPoint >= _points.Length)
+                {
+                    _currentPoint = 0;
+                }
+            }
+        }
     }
 }
