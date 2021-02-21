@@ -9,10 +9,10 @@ public class Platform : MonoBehaviour
     [SerializeField] private float _respawnTime;
 
     [SerializeField] private bool _movingPlatform;
+    [SerializeField] private Transform _platform;
     [SerializeField] private Transform[] _points;
     [SerializeField] private int _currentPoint;
     [SerializeField] private float _platformSpeed;
-    [SerializeField] private Transform _platform;
 
     private Rigidbody2D _rb;
 
