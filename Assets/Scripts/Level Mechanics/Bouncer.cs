@@ -24,9 +24,9 @@ public class Bouncer : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<Rigidbody2D>().velocity = (Vector2.up * _bounceForce);
+            PlayerController.instance._rb.velocity = new Vector2(PlayerController.instance._rb.velocity.x, _bounceForce);
 
-            _animator.Play("bouncer_up");
+            _animator.SetTrigger("canBounce");
         }
     }
 }

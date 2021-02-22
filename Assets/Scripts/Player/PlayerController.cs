@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
 
     public bool stopInput;
 
-    private Rigidbody2D _rb;
+    public Rigidbody2D _rb;
     private Animator _animator;
 
     private float _horizontal;
