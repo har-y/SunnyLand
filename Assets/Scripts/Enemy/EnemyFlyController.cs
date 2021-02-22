@@ -4,7 +4,6 @@ public class EnemyFlyController : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer _enemySprite;
 
-    [SerializeField] private Transform _enemy;
     [SerializeField] private Transform[] _points;
 
     [SerializeField] private float _enemySpeed;
@@ -22,7 +21,10 @@ public class EnemyFlyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        foreach (Transform item in _points)
+        {
+            item.parent = null;
+        }
     }
 
     // Update is called once per frame
@@ -39,7 +41,7 @@ public class EnemyFlyController : MonoBehaviour
         }
         else
         {
-            if (Vector3.Distance(_enemy.position, PlayerController.instance.transform.position) > _attackDistance)
+            if (Vector3.Distance(transform.position, PlayerController.instance.transform.position) > _attackDistance)
             {
                 _attackTarget = Vector3.zero;
 
@@ -52,9 +54,9 @@ public class EnemyFlyController : MonoBehaviour
                     _attackTarget = PlayerController.instance.transform.position;
                 }
 
-                _enemy.position = Vector3.MoveTowards(_enemy.position, _attackTarget, _attackSpeed * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, _attackTarget, _attackSpeed * Time.deltaTime);
 
-                if (Vector3.Distance(_enemy.position, _attackTarget) <= 0.1f)
+                if (Vector3.Distance(transform.position, _attackTarget) <= 0.1f)
                 {
                     _attackCounter = _waitAfterAttack;
                     _attackTarget = Vector3.zero;
@@ -65,9 +67,9 @@ public class EnemyFlyController : MonoBehaviour
 
     private void EnemyFlyMove()
     {
-        _enemy.position = Vector3.MoveTowards(_enemy.position, _points[_currentPoint].position, _enemySpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, _points[_currentPoint].position, _enemySpeed * Time.deltaTime);
 
-        if (Vector3.Distance(_enemy.position, _points[_currentPoint].position) <= 0.05f)
+        if (Vector3.Distance(transform.position, _points[_currentPoint].position) <= 0.05f)
         {
             _currentPoint++;
 

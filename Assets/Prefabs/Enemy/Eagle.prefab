@@ -169,7 +169,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5191435143332512360}
   - component: {fileID: 5191435143332512361}
+  - component: {fileID: 8810674857775069392}
   - component: {fileID: 5191435143332512362}
+  - component: {fileID: 2265678232666870779}
   m_Layer: 0
   m_Name: Eagle
   m_TagString: Enemy
@@ -213,6 +215,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!58 &8810674857775069392
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5191435143332512359}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.25}
+  serializedVersion: 2
+  m_Radius: 0.95
 --- !u!114 &5191435143332512362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,8 +244,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemySprite: {fileID: 5191435141737479340}
-  _enemy: {fileID: 5191435141737479339}
   _points:
   - {fileID: 5191435143151012552}
   - {fileID: 5191435141610501867}
   _enemySpeed: 2
+  _attackDistance: 0
+  _attackSpeed: 0
+  _waitAfterAttack: 0
+--- !u!114 &2265678232666870779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5191435143332512359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41829f8a2747d8a42bc3a6f330896a6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
