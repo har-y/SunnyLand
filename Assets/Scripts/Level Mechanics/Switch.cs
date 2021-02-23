@@ -11,8 +11,8 @@ public class Switch : MonoBehaviour
     [SerializeField] private Sprite _switchOn;
     [SerializeField] private Sprite _switchOff;
 
-    public bool _activateSwitch;
-    public bool _hasSwitched;
+    private bool _activateSwitch;
+    private bool _hasSwitched;
 
     // Start is called before the first frame update
     void Start()
