@@ -7,7 +7,7 @@ public class BossTankController : MonoBehaviour
     [Header("Boss Tank")]
     private Animator _animator;
     [SerializeField] private Transform _boss;
-    [SerializeField] private BossState _state;
+    [SerializeField] private BossState _currentState;
 
     [Header("Boss Tank - Movement")]
     [SerializeField] private Transform _rightPoint;
@@ -37,22 +37,47 @@ public class BossTankController : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
 
-        _state = BossState.shoot;
+        _currentState = BossState.shoot;
     }
 
     // Update is called once per frame
     void Update()
     {
-        switch (_state)
+        switch (_currentState)
         {
             case BossState.move:
                 break;
             case BossState.hit:
+
+                if (_hurtCounter > 0)
+                {
+                    _hurtCounter -= Time.deltaTime;
+
+                    if (_hurtCounter <= 0)
+                    {
+                        _currentState = BossState.move;
+                    }
+                }
+
                 break;
             case BossState.shoot:
                 break;
             default:
                 break;
         }
+
+#if UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            TakeHit();
+        }
+#endif
+    }
+
+    public void TakeHit()
+    {
+        _currentState = BossState.hit;
+
+        _hurtCounter = _hurtTime;
     }
 }
