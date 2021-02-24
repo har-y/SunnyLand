@@ -796,13 +796,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _boss: {fileID: 500066301}
-  _rightPoint: {fileID: 307189921}
-  _leftPoint: {fileID: 1427556225}
+  _currentState: 0
+  _leftPoint: {fileID: 307189921}
+  _rightPoint: {fileID: 1427556225}
   _moveSpeed: 10
   _bulletPrefab: {fileID: 0}
   _bulletPoint: {fileID: 1407002957}
   _bulletDelay: 1.5
-  _hurtTime: 2
+  _hurtTime: 1
 --- !u!1 &925153660
 GameObject:
   m_ObjectHideFlags: 0

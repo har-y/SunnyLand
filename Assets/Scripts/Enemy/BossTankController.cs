@@ -10,8 +10,8 @@ public class BossTankController : MonoBehaviour
     [SerializeField] private BossState _currentState;
 
     [Header("Boss Tank - Movement")]
-    [SerializeField] private Transform _rightPoint;
     [SerializeField] private Transform _leftPoint;
+    [SerializeField] private Transform _rightPoint;
     [SerializeField] private float _moveSpeed;
     private bool _changeDirection;
 
@@ -46,7 +46,40 @@ public class BossTankController : MonoBehaviour
         switch (_currentState)
         {
             case BossState.move:
+
+                if (_changeDirection)
+                {
+                    _boss.position += new Vector3(_moveSpeed * Time.deltaTime, 0f, 0f);
+
+                    if (_boss.position.x >= _rightPoint.position.x)
+                    {
+                        _boss.localScale = new Vector3(1f, 1f, 1f);
+
+                        _changeDirection = false;
+
+                        _currentState = BossState.shoot;
+
+                        _bulletCounter = _bulletDelay;
+                    }
+                }
+                else
+                {
+                    _boss.position -= new Vector3(_moveSpeed * Time.deltaTime, 0f, 0f);
+
+                    if (_boss.position.x <= _leftPoint.position.x)
+                    {
+                        _boss.localScale = new Vector3(-1f, 1f, 1f);
+
+                        _changeDirection = true;
+
+                        _currentState = BossState.shoot;
+
+                        _bulletCounter = _bulletDelay;
+                    }
+                }
+
                 break;
+
             case BossState.hit:
 
                 if (_hurtCounter > 0)
@@ -60,8 +93,10 @@ public class BossTankController : MonoBehaviour
                 }
 
                 break;
+
             case BossState.shoot:
                 break;
+
             default:
                 break;
         }
