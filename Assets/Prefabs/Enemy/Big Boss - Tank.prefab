@@ -184,7 +184,7 @@ MonoBehaviour:
   _leftPoint: {fileID: 2851416296233789679}
   _rightPoint: {fileID: 2851416297321789391}
   _moveSpeed: 10
-  _bulletPrefab: {fileID: 0}
+  _bulletPrefab: {fileID: 6730242034168853653, guid: 2169fb3a5f06cbc4b987ec8c3a9f5a9c, type: 3}
   _bulletPoint: {fileID: 2851416297283262723}
   _bulletDelay: 1.5
   _hurtTime: 1

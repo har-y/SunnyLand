@@ -70,23 +70,13 @@ public class BossTankController : MonoBehaviour
                 break;
 
             case BossState.shoot:
+
+                EnemyBossShoot();
+
                 break;
 
             default:
                 break;
-        }
-    }
-
-    private void EnemyBossHit()
-    {
-        if (_hurtCounter > 0)
-        {
-            _hurtCounter -= Time.deltaTime;
-
-            if (_hurtCounter <= 0)
-            {
-                _currentState = BossState.move;
-            }
         }
     }
 
@@ -117,6 +107,33 @@ public class BossTankController : MonoBehaviour
 
                 StopMovement();
             }
+        }
+    }
+
+
+    private void EnemyBossHit()
+    {
+        if (_hurtCounter > 0)
+        {
+            _hurtCounter -= Time.deltaTime;
+
+            if (_hurtCounter <= 0)
+            {
+                _currentState = BossState.move;
+            }
+        }
+    }
+
+    private void EnemyBossShoot()
+    {
+        _bulletCounter -= Time.deltaTime;
+
+        if (_bulletCounter <= 0)
+        {
+            _bulletCounter = _bulletDelay;
+
+            GameObject _fire = Instantiate(_bulletPrefab, _bulletPoint.position, _bulletPoint.rotation);
+            _fire.transform.localScale = _boss.localScale;
         }
     }
 
