@@ -43,50 +43,29 @@ public class BossTankController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        EnemyBoss();
+
+#if UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            TakeHit();
+        }
+#endif
+    }
+
+    private void EnemyBoss()
+    {
         switch (_currentState)
         {
             case BossState.move:
 
-                if (_changeDirection)
-                {
-                    _boss.position += new Vector3(_moveSpeed * Time.deltaTime, 0f, 0f);
-
-                    if (_boss.position.x >= _rightPoint.position.x)
-                    {
-                        _boss.localScale = new Vector3(1f, 1f, 1f);
-
-                        _changeDirection = false;
-
-                        StopMovement();
-                    }
-                }
-                else
-                {
-                    _boss.position -= new Vector3(_moveSpeed * Time.deltaTime, 0f, 0f);
-
-                    if (_boss.position.x <= _leftPoint.position.x)
-                    {
-                        _boss.localScale = new Vector3(-1f, 1f, 1f);
-
-                        _changeDirection = true;
-
-                        StopMovement();
-                    }
-                }
+                EnemyBossMove();
 
                 break;
 
             case BossState.hit:
 
-                if (_hurtCounter > 0)
-                {
-                    _hurtCounter -= Time.deltaTime;
-
-                    if (_hurtCounter <= 0)
-                    {
-                        _currentState = BossState.move;
-                    }
-                }
+                EnemyBossHit();
 
                 break;
 
@@ -96,13 +75,49 @@ public class BossTankController : MonoBehaviour
             default:
                 break;
         }
+    }
 
-#if UNITY_EDITOR
-        if (Input.GetKeyDown(KeyCode.H))
+    private void EnemyBossHit()
+    {
+        if (_hurtCounter > 0)
         {
-            TakeHit();
+            _hurtCounter -= Time.deltaTime;
+
+            if (_hurtCounter <= 0)
+            {
+                _currentState = BossState.move;
+            }
         }
-#endif
+    }
+
+    private void EnemyBossMove()
+    {
+        if (_changeDirection)
+        {
+            _boss.position += new Vector3(_moveSpeed * Time.deltaTime, 0f, 0f);
+
+            if (_boss.position.x >= _rightPoint.position.x)
+            {
+                _boss.localScale = new Vector3(1f, 1f, 1f);
+
+                _changeDirection = false;
+
+                StopMovement();
+            }
+        }
+        else
+        {
+            _boss.position -= new Vector3(_moveSpeed * Time.deltaTime, 0f, 0f);
+
+            if (_boss.position.x <= _leftPoint.position.x)
+            {
+                _boss.localScale = new Vector3(-1f, 1f, 1f);
+
+                _changeDirection = true;
+
+                StopMovement();
+            }
+        }
     }
 
     public void TakeHit()
