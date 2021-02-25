@@ -57,9 +57,7 @@ public class BossTankController : MonoBehaviour
 
                         _changeDirection = false;
 
-                        _currentState = BossState.shoot;
-
-                        _bulletCounter = _bulletDelay;
+                        StopMovement();
                     }
                 }
                 else
@@ -72,9 +70,7 @@ public class BossTankController : MonoBehaviour
 
                         _changeDirection = true;
 
-                        _currentState = BossState.shoot;
-
-                        _bulletCounter = _bulletDelay;
+                        StopMovement();
                     }
                 }
 
@@ -114,5 +110,16 @@ public class BossTankController : MonoBehaviour
         _currentState = BossState.hit;
 
         _hurtCounter = _hurtTime;
+
+        _animator.SetTrigger("isHit");
+    }
+
+    private void StopMovement()
+    {
+        _currentState = BossState.shoot;
+
+        _bulletCounter = _bulletDelay;
+
+        _animator.SetTrigger("isStop");
     }
 }
