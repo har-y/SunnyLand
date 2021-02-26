@@ -151,7 +151,7 @@ public class BossTankController : MonoBehaviour
     {
         _currentState = BossState.shoot;
 
-        _bulletCounter = _bulletDelay;
+        _bulletCounter = 0f;
 
         _animator.SetTrigger("isStop");
 
