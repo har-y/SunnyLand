@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4145175722631201334}
   m_Layer: 8
   m_Name: player_detect_point
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 9012715766864449749}
   m_Layer: 8
   m_Name: player_body
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 9012715768058913429}
   m_Layer: 8
   m_Name: player_ground_point
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -297,11 +297,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 640
   _moveSpeed: 8
-  _jumpForce: 15
+  _jumpForce: 12
   _bounceForce: 12
   _knockBackTime: 0.5
   _knockBackForce: 10
   stopInput: 0
+  _rb: {fileID: 0}
 --- !u!114 &4448010560405291881
 MonoBehaviour:
   m_ObjectHideFlags: 0

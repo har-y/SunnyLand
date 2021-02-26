@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BossTankHitBox : MonoBehaviour
 {
+    [SerializeField] BossTankController _bossController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +16,17 @@ public class BossTankHitBox : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player" && PlayerController.instance.transform.position.y >= transform.position.y)
+        {
+            _bossController.TakeHit();
+
+            PlayerController.instance.Bounce();
+
+            gameObject.SetActive(false);
+        }
     }
 }

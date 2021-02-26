@@ -22,6 +22,7 @@ public class BossTankController : MonoBehaviour
     private float _bulletCounter;
 
     [Header("Boss Tank - Health")]
+    [SerializeField] private GameObject _hitBox;
     [SerializeField] private float _hurtTime;
     private float _hurtCounter;
 
@@ -153,5 +154,7 @@ public class BossTankController : MonoBehaviour
         _bulletCounter = _bulletDelay;
 
         _animator.SetTrigger("isStop");
+
+        _hitBox.SetActive(true);
     }
 }
