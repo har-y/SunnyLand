@@ -4787,6 +4787,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2851416296755485954, guid: 40a6b4f0bc5d4f6409aee0968690c8fd, type: 3}
+      propertyPath: _bossHealth
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2851416296755485956, guid: 40a6b4f0bc5d4f6409aee0968690c8fd, type: 3}
       propertyPath: m_RootOrder
       value: 4

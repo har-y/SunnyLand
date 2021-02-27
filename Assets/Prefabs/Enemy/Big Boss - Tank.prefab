@@ -260,9 +260,14 @@ MonoBehaviour:
   _bulletPrefab: {fileID: 6730242034168853653, guid: 2169fb3a5f06cbc4b987ec8c3a9f5a9c, type: 3}
   _bulletPoint: {fileID: 2851416297283262723}
   _bulletDelay: 1.5
+  _bulletSpeedUp: 1.2
   _minePrefab: {fileID: 7392448083498756876, guid: 52c417347b7132f4db42bb9b495b3a3d, type: 3}
   _minePoint: {fileID: 9058798978783550907}
   _mineDelay: 2
+  _mineSpeedUp: 1.2
+  _bossHealth: 5
+  _bossExplosion: {fileID: 3402003171754654322, guid: 4ea8fb236fb00d14cb07594338ca39f9, type: 3}
+  _isDefeated: 0
   _hitBox: {fileID: 1820046574}
   _hurtTime: 1
 --- !u!1 &2851416297283262722

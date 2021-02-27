@@ -19,15 +19,22 @@ public class BossTankController : MonoBehaviour
     [SerializeField] private GameObject _bulletPrefab;
     [SerializeField] private Transform _bulletPoint;
     [SerializeField] private float _bulletDelay;
+    [SerializeField] private float _bulletSpeedUp;
     private float _bulletCounter;
 
     [Header("Boss Tank - Mine")]
     [SerializeField] private GameObject _minePrefab;
     [SerializeField] private Transform _minePoint;
     [SerializeField] private float _mineDelay;
+    [SerializeField] private float _mineSpeedUp;
     private float _mineCounter;
 
     [Header("Boss Tank - Health")]
+    [SerializeField] private int _bossHealth;
+    [SerializeField] private GameObject _bossExplosion;
+    [SerializeField] private bool _isDefeated;
+
+    [Header("Boss Tank - HitBox")]
     [SerializeField] private GameObject _hitBox;
     [SerializeField] private float _hurtTime;
     private float _hurtCounter;
@@ -36,7 +43,8 @@ public class BossTankController : MonoBehaviour
     {
         move,
         hit,
-        shoot
+        shoot,
+        end
     }
 
     // Start is called before the first frame update
@@ -79,6 +87,10 @@ public class BossTankController : MonoBehaviour
             case BossState.shoot:
 
                 EnemyBossShoot();
+
+                break;
+
+            case BossState.end:
 
                 break;
 
@@ -135,9 +147,19 @@ public class BossTankController : MonoBehaviour
 
             if (_hurtCounter <= 0)
             {
+                _mineCounter = 0f;
+
                 _currentState = BossState.move;
 
-                _mineCounter = 0.5f;
+                if (_isDefeated)
+                {
+                    _boss.gameObject.SetActive(false);
+
+                    Instantiate(_bossExplosion, _boss.position, _boss.rotation);
+
+                    _currentState = BossState.end;
+                }
+
             }
         }
     }
@@ -165,12 +187,24 @@ public class BossTankController : MonoBehaviour
 
         BossTankMine[] mines = FindObjectsOfType<BossTankMine>();
 
-        if (mines.Length > 0)
+        if (mines.Length > 0f)
         {
             foreach (BossTankMine item in mines)
             {
                 item.ExplodeMine();
             }
+        }
+
+        _bossHealth--;
+
+        if (_bossHealth <= 0f)
+        {
+            _isDefeated = true;
+        }
+        else
+        {
+            _bulletDelay /= _bulletSpeedUp;
+            _mineDelay /= _mineSpeedUp;
         }
     }
 
