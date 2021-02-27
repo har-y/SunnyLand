@@ -21,6 +21,12 @@ public class BossTankController : MonoBehaviour
     [SerializeField] private float _bulletDelay;
     private float _bulletCounter;
 
+    [Header("Boss Tank - Mine")]
+    [SerializeField] private GameObject _minePrefab;
+    [SerializeField] private Transform _minePoint;
+    [SerializeField] private float _mineDelay;
+    private float _mineCounter;
+
     [Header("Boss Tank - Health")]
     [SerializeField] private GameObject _hitBox;
     [SerializeField] private float _hurtTime;
@@ -109,6 +115,15 @@ public class BossTankController : MonoBehaviour
                 StopMovement();
             }
         }
+
+        _mineCounter -= Time.deltaTime;
+
+        if (_mineCounter <= 0f)
+        {
+            _mineCounter = _mineDelay;
+
+            Instantiate(_minePrefab, _minePoint.position, _minePoint.rotation);
+        }
     }
 
 
@@ -121,6 +136,8 @@ public class BossTankController : MonoBehaviour
             if (_hurtCounter <= 0)
             {
                 _currentState = BossState.move;
+
+                _mineCounter = 0f;
             }
         }
     }

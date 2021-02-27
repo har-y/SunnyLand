@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BossTankMine : MonoBehaviour
 {
+    [SerializeField] private GameObject _explosionPrefab;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +16,17 @@ public class BossTankMine : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            Destroy(gameObject);
+
+            Instantiate(_explosionPrefab, transform.position, transform.rotation);
+
+            PlayerHealthController.instance.DealDamage();
+        }
     }
 }
