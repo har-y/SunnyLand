@@ -18,8 +18,8 @@ TagManager:
   - ground
   - player
   - platform
-  - 
-  - 
+  - detect point
+  - bullet
   - 
   - 
   - 

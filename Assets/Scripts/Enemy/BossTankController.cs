@@ -39,6 +39,9 @@ public class BossTankController : MonoBehaviour
     [SerializeField] private float _hurtTime;
     private float _hurtCounter;
 
+    [Header("Boss Tank - Other")]
+    [SerializeField] private GameObject _winPlatform;
+
     public enum BossState
     {
         move,
@@ -91,6 +94,7 @@ public class BossTankController : MonoBehaviour
                 break;
 
             case BossState.end:
+                _winPlatform.SetActive(true);
 
                 break;
 
