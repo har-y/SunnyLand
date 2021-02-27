@@ -32,6 +32,8 @@ public class BossTankMine : MonoBehaviour
     {
         Destroy(gameObject);
 
+        AudioManager.instance.PlaySoundClip(4);
+
         Instantiate(_explosionPrefab, transform.position, transform.rotation);
     }
 }

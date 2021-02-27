@@ -94,7 +94,10 @@ public class BossTankController : MonoBehaviour
                 break;
 
             case BossState.end:
+
                 _winPlatform.SetActive(true);
+
+                AudioManager.instance.PlayMusicClip(4);
 
                 break;
 
@@ -188,6 +191,8 @@ public class BossTankController : MonoBehaviour
         _hurtCounter = _hurtTime;
 
         _animator.SetTrigger("isHit");
+
+        AudioManager.instance.PlaySoundClip(1);
 
         BossTankMine[] mines = FindObjectsOfType<BossTankMine>();
 

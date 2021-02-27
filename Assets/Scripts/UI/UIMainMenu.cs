@@ -15,8 +15,6 @@ public class UIMainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        AudioManager.instance.PlayMusicClip(5);
-
         ContinueGameButton();
     }
 

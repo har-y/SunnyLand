@@ -23,8 +23,6 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        AudioManager.instance.PlayMusicClip(4);
-
         levelTime = 0f;
     }
 
@@ -67,8 +65,6 @@ public class LevelManager : MonoBehaviour
 
     private IEnumerator LevelEndCoroutine()
     {
-        AudioManager.instance.PlayMusicClip(3);
-
         PlayerController.instance.stopInput = true;
         CameraController.instance.stopFollow = true;
 

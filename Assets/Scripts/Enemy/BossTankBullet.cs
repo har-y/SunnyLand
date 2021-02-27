@@ -9,7 +9,7 @@ public class BossTankBullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        AudioManager.instance.PlaySoundClip(3);
     }
 
     // Update is called once per frame
@@ -23,6 +23,8 @@ public class BossTankBullet : MonoBehaviour
         if (collision.tag == "Player")
         {
             PlayerHealthController.instance.DealDamage();
+
+            AudioManager.instance.PlaySoundClip(2);
         }
 
         Destroy(gameObject);
