@@ -15795,6 +15795,18 @@ PrefabInstance:
       propertyPath: isLocked
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -204070895806055093, guid: 993a941c492e8aa498e0e0d8e8df35b3, type: 3}
+      propertyPath: levelTitle
+      value: Level 8 - Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: -204070895806055093, guid: 993a941c492e8aa498e0e0d8e8df35b3, type: 3}
+      propertyPath: levelToLoad
+      value: Level 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: -204070895806055093, guid: 993a941c492e8aa498e0e0d8e8df35b3, type: 3}
+      propertyPath: levelToCheck
+      value: Level 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 4055380690679804581, guid: 993a941c492e8aa498e0e0d8e8df35b3, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -16664,7 +16676,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &2155918685206412118
 CanvasRenderer:
   m_ObjectHideFlags: 0
