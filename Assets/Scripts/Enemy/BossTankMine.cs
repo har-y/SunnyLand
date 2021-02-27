@@ -22,11 +22,16 @@ public class BossTankMine : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            Destroy(gameObject);
-
-            Instantiate(_explosionPrefab, transform.position, transform.rotation);
+            ExplodeMine();
 
             PlayerHealthController.instance.DealDamage();
         }
+    }
+
+    public void ExplodeMine()
+    {
+        Destroy(gameObject);
+
+        Instantiate(_explosionPrefab, transform.position, transform.rotation);
     }
 }

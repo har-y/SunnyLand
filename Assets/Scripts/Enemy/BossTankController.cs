@@ -137,7 +137,7 @@ public class BossTankController : MonoBehaviour
             {
                 _currentState = BossState.move;
 
-                _mineCounter = 0f;
+                _mineCounter = 0.5f;
             }
         }
     }
@@ -162,6 +162,16 @@ public class BossTankController : MonoBehaviour
         _hurtCounter = _hurtTime;
 
         _animator.SetTrigger("isHit");
+
+        BossTankMine[] mines = FindObjectsOfType<BossTankMine>();
+
+        if (mines.Length > 0)
+        {
+            foreach (BossTankMine item in mines)
+            {
+                item.ExplodeMine();
+            }
+        }
     }
 
     private void StopMovement()
