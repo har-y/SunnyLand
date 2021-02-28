@@ -203,7 +203,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2851416296755485956
 Transform:
   m_ObjectHideFlags: 0
@@ -265,11 +265,12 @@ MonoBehaviour:
   _minePoint: {fileID: 9058798978783550907}
   _mineDelay: 2
   _mineSpeedUp: 1.2
-  _bossHealth: 5
+  _bossHealth: 1
   _bossExplosion: {fileID: 3402003171754654322, guid: 4ea8fb236fb00d14cb07594338ca39f9, type: 3}
   _isDefeated: 0
   _hitBox: {fileID: 1820046574}
   _hurtTime: 1
+  _winPlatform: {fileID: 0}
 --- !u!1 &2851416297283262722
 GameObject:
   m_ObjectHideFlags: 0

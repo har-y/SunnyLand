@@ -95,10 +95,6 @@ public class BossTankController : MonoBehaviour
 
             case BossState.end:
 
-                _winPlatform.SetActive(true);
-
-                AudioManager.instance.PlayMusicClip(4);
-
                 break;
 
             default:
@@ -161,6 +157,10 @@ public class BossTankController : MonoBehaviour
                 if (_isDefeated)
                 {
                     _boss.gameObject.SetActive(false);
+
+                    _winPlatform.SetActive(true);
+
+                    AudioManager.instance.PlayMusicClip(4);
 
                     Instantiate(_bossExplosion, _boss.position, _boss.rotation);
 
