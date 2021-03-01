@@ -33,9 +33,9 @@ public class Switch : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.tag == "Player" && !_hasSwitched)
+        if (other.tag == "Player" && !_hasSwitched)
         {
             _activateSwitch = !_activateSwitch;
 
@@ -52,7 +52,7 @@ public class Switch : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D other)
     {
         _hasSwitched = false;
     }

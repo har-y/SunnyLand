@@ -18,9 +18,9 @@ public class BossTankHitBox : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.tag == "Player" && PlayerController.instance.transform.position.y >= transform.position.y)
+        if (other.tag == "Player" && PlayerController.instance.transform.position.y >= transform.position.y)
         {
             _bossController.TakeHit();
 

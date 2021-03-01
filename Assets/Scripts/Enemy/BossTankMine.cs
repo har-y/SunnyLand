@@ -18,9 +18,9 @@ public class BossTankMine : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.tag == "Player")
+        if (other.tag == "Player")
         {
             ExplodeMine();
 

@@ -46,9 +46,9 @@ public class Platform : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.tag == "Dead Zone" && _respawn)
+        if (other.tag == "Dead Zone" && _respawn)
         {
             StartCoroutine(RespawnPlatformCoroutine());
         }

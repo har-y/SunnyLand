@@ -24,9 +24,9 @@ public class Collectibles : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.tag == "Player" && !_isCollected)
+        if (other.tag == "Player" && !_isCollected)
         {
 
             if (_isLife)

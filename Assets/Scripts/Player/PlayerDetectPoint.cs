@@ -22,15 +22,15 @@ public class PlayerDetectPoint : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.tag == "Enemy")
+        if (other.tag == "Enemy")
         {
             Debug.Log("enemy");
 
-            collision.gameObject.SetActive(false);
+            other.gameObject.SetActive(false);
 
-            Instantiate(_deathEffect, collision.transform.position, collision.transform.rotation);
+            Instantiate(_deathEffect, other.transform.position, other.transform.rotation);
 
             PlayerController.instance.Bounce();
 
@@ -38,7 +38,7 @@ public class PlayerDetectPoint : MonoBehaviour
 
             if (dropValue <= _dropChance)
             {
-                Instantiate(_collectible, collision.transform.position, collision.transform.rotation);
+                Instantiate(_collectible, other.transform.position, other.transform.rotation);
             }
 
             AudioManager.instance.PlaySoundClip(4);
