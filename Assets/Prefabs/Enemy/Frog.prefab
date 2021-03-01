@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2620073473233678471}
-  - component: {fileID: 2620073473233678468}
-  - component: {fileID: 2620073473233678470}
   - component: {fileID: 2620073473233678469}
+  - component: {fileID: 2620073473233678468}
+  - component: {fileID: 3903452256149015355}
   - component: {fileID: 2620073473233678491}
-  - component: {fileID: 2620073473233678490}
+  - component: {fileID: 8067892908118912392}
   m_Layer: 0
   m_Name: Frog
   m_TagString: Enemy
@@ -38,6 +38,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2620073473233678469
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2620073473233678464}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 284874b18e88b9446b8cf2a2cbad909a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!50 &2620073473233678468
 Rigidbody2D:
   serializedVersion: 4
@@ -59,7 +78,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &2620073473233678470
+--- !u!61 &3903452256149015355
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -85,25 +104,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6, y: 1.2}
   m_EdgeRadius: 0
---- !u!95 &2620073473233678469
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2620073473233678464}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 284874b18e88b9446b8cf2a2cbad909a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &2620073473233678491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,7 +122,7 @@ MonoBehaviour:
   _moveSpeed: 3.5
   _moveTime: 3
   _waitTime: 2
---- !u!114 &2620073473233678490
+--- !u!114 &8067892908118912392
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,7 +144,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2620073473381956709}
   - component: {fileID: 2620073473381956708}
-  - component: {fileID: 2620073473381956731}
+  - component: {fileID: 2620073472599472527}
   m_Layer: 0
   m_Name: frog_body
   m_TagString: Enemy
@@ -217,7 +217,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &2620073473381956731
+--- !u!61 &2620073472599472527
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -241,7 +241,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6, y: 1}
+  m_Size: {x: 1.6, y: 1.2}
   m_EdgeRadius: 0
 --- !u!1 &2620073473984517153
 GameObject:

@@ -4374,9 +4374,37 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4464035571953770957}
     m_Modifications:
+    - target: {fileID: 292390097795872008, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
+      propertyPath: m_Size.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 292390097795872008, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3296843430039759608, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4320733887450010922, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 9012715766864449755, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 9012715768058913434, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 9012715768587370721, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
       propertyPath: _jumpForce
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 9012715768587370721, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
+      propertyPath: _bounceForce
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 9012715768587370724, guid: 87c1436e26cfb9b4fb0d78e31f4016f0, type: 3}
       propertyPath: m_RootOrder

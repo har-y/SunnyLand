@@ -590,7 +590,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &759493751
 Transform:
   m_ObjectHideFlags: 0
@@ -735,7 +735,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1391401417
 Transform:
   m_ObjectHideFlags: 0
@@ -4907,10 +4907,6 @@ PrefabInstance:
     - target: {fileID: 6485638480205043921, guid: f2e85ce3493ead54e9f6e7088a9a518d, type: 3}
       propertyPath: m_Name
       value: Game Pack
-      objectReference: {fileID: 0}
-    - target: {fileID: 7905441482824451919, guid: f2e85ce3493ead54e9f6e7088a9a518d, type: 3}
-      propertyPath: _trackID
-      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2e85ce3493ead54e9f6e7088a9a518d, type: 3}
