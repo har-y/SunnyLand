@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6730242034168853652}
   - component: {fileID: 6730242034168855402}
   - component: {fileID: 6730242034168855401}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Big Boss - Tank - Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6730242034291557130}
   - component: {fileID: 6730242034291557129}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: big_boss_tank_bullet_body
   m_TagString: Untagged
   m_Icon: {fileID: 0}

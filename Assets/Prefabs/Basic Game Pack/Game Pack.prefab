@@ -4356,6 +4356,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 887355535681124931, guid: ce0c4a29f26504e4d82a4ecb63fefa57, type: 3}
+      propertyPath: _nextLevel
+      value: Level Victory
+      objectReference: {fileID: 0}
     - target: {fileID: 887355535681124932, guid: ce0c4a29f26504e4d82a4ecb63fefa57, type: 3}
       propertyPath: m_Name
       value: Level Manager
